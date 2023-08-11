@@ -1,8 +1,9 @@
+import Drawer from "../../components/Drawer";
 
 function App() {
   return (
-    <div>
-      <h1 className="text-xl">Project setup</h1>
+    <div data-theme="cupcake" className="grid-cols-2">
+        <Drawer />
     </div>
   );
 }
