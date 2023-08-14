@@ -1,65 +1,62 @@
-import logo from '../../assets/images/admin-logo.svg'
+import logo from '../assets/images/admin-logo.svg'
 import {
-    Squares2X2Icon as DashboardIcon,
-    CubeIcon as OrderIcon,
-    BuildingStorefrontIcon as StockIcon,
     ArrowsRightLeftIcon as ExchangeIcon,
-    WrenchScrewdriverIcon as RepairIcon,
+    BuildingStorefrontIcon as StockIcon,
+    CubeIcon as OrderIcon,
+    Squares2X2Icon as DashboardIcon,
     TagIcon as DemoIcon,
+    WrenchScrewdriverIcon as RepairIcon,
 } from '@heroicons/react/24/outline'
+import {Link} from 'react-router-dom'
 
 
 const Drawer = () => {
     return (
-        <div className="drawer md:drawer-open">
+        <div className="drawer md:drawer-open w-auto">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle"/>
-            <div className="drawer-content flex flex-col items-center justify-center">
-                {/* Page content here */}
-                <label htmlFor="my-drawer-2" className="btn btn-primary drawer-button lg:hidden">Open drawer</label>
 
-            </div>
-            <div className="drawer-side">
-                <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
+            <div className="drawer-side inline-block">
                 <ul className="menu p-4 w-80 h-full bg-base-200 space-y-4 text-base-content">
-                    {/* Sidebar content here */}
                     <li className="m-12">
-                        <img src={logo} alt="Logo" className="flex items-center"/>
+                        <Link to="/">
+                            <img src={logo} alt="Logo" className="flex items-center p-0"/>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/">
                             <DashboardIcon className="h-7 w-7"/>
                             Dashboard
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/orders">
                             <OrderIcon className="h-7 w-7"/>
                             Orders
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/stock">
                             <StockIcon className="h-7 w-7"/>
                             Stock
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/exchanges">
                             <ExchangeIcon className="h-7 w-7"/>
-                            Size exchange
-                        </a>
+                            Exchanges
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/repairs">
                             <RepairIcon className="h-7 w-7"/>
                             Repairs
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/demos">
                             <DemoIcon className="h-7 w-7"/>
                             Demos
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
