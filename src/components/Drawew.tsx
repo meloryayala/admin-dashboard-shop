@@ -16,8 +16,8 @@ const Drawer = () => {
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle"/>
 
             <div className="drawer-side inline-block">
-                <ul className="menu p-4 w-80 h-full bg-base-200 space-y-4 text-base-content">
-                    <li className="m-12">
+                <ul className="menu p-4 md:w-60 lg:w-70 xl:w-80 h-screen bg-base-300 space-y-4 text-base-content">
+                    <li className="m-6">
                         <Link to="/">
                             <img src={logo} alt="Logo" className="flex items-center p-0"/>
                         </Link>
