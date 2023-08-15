@@ -1,4 +1,4 @@
-import OrderRow from "../components/OrderRow";
+import OrderRow from "../components/Orders/OrderRow";
 import {lastOrders} from "../data/orders";
 
 const Orders = () => {
@@ -23,14 +23,14 @@ const Orders = () => {
 
             <div className="container-center">
                 {
-                    lastOrders.map(lastorder => (
+                    lastOrders.map(lastOrder => (
                         <OrderRow
-                            clientName={lastorder.clientInfo.name}
-                            clientAdress={`${lastorder.clientInfo.adress.street}, ${lastorder.clientInfo.adress.city}`}
-                            products={lastorder.orderInfo.products}
-                            orderDate={lastorder.orderInfo.orderDate}
-                            sendDate={lastorder.orderInfo.sendDate}
-                            orderStatus={lastorder.orderInfo.orderStatus}
+                            clientName={lastOrder.clientInfo.name}
+                            clientAdress={`${lastOrder.clientInfo.adress.street}, ${lastOrder.clientInfo.adress.city}`}
+                            products={lastOrder.orderInfo.products}
+                            orderDate={lastOrder.orderInfo.orderDate}
+                            sendDate={lastOrder.orderInfo.sendDate}
+                            orderStatus={lastOrder.orderInfo.orderStatus}
                         />
                     ))
                 }
