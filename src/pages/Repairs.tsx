@@ -1,7 +1,14 @@
+import {FC, JSX} from "react";
+import Header from "../components/Header";
 
-const Repairs = () => {
+interface HeaderProps {
+    title: string;
+    pageIcon: JSX.Element;
+}
+
+const Repairs:FC<HeaderProps> = ({title, pageIcon}) => {
     return(
-        <h1>Repairs</h1>
+        <Header title={title} pageIcon={pageIcon} />
     )
 };
 

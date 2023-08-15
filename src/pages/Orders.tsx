@@ -1,10 +1,19 @@
-import OrderRow from "../components/Orders/OrderRow";
+import {FC, JSX} from "react";
 import {lastOrders} from "../data/orders";
+import OrderRow from "../components/Orders/OrderRow";
+import Header from "../components/Header";
 
-const Orders = () => {
+interface HeaderProps {
+    title: string;
+    pageIcon: JSX.Element;
+}
+
+const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
     return (
         <>
-            <div className="container-center my-10">
+            <Header title={title} pageIcon={pageIcon} />
+
+            <div className="container-center my-6">
                 <div className="join flex">
                     <input className="input join-item w-full" placeholder="Search"/>
                     <button className="btn join-item bg-lime-300">Search</button>

@@ -1,7 +1,15 @@
+import {FC, JSX} from "react";
+import Header from "../components/Header";
+import React from "react";
 
-const Stock = () => {
+interface HeaderProps {
+    title: string;
+    pageIcon: JSX.Element;
+}
+
+const Stock:FC<HeaderProps> = ({title, pageIcon}) => {
     return(
-        <h1>Stock</h1>
+        <Header title={title} pageIcon={pageIcon} />
     )
 };
 

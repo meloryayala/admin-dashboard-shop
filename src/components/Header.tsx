@@ -1,10 +1,15 @@
-import {CubeIcon as OrderIcon } from "@heroicons/react/24/outline";
+import {FC, JSX} from "react";
 
-const Header = () => {
-    return (
+interface HeaderProps {
+    title?: string;
+    pageIcon?: JSX.Element;
+}
+
+const Header: FC<HeaderProps> = ({ title, pageIcon}) => {
+        return (
         <div className="flex items-center">
-            <OrderIcon className="h-9 w-9 mr-4 text-accent" />
-            <h1 className="text-2xl font-semibold">Orders</h1>
+            {pageIcon}
+            <h1 className="text-2xl font-semibold ml-3">{title}</h1>
         </div>
 
         // <div className="flex items-center">

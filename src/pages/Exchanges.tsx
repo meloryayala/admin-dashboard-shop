@@ -1,7 +1,14 @@
+import {FC, JSX} from "react";
+import Header from "../components/Header";
 
-const Exchanges = () => {
+interface HeaderProps {
+    title: string;
+    pageIcon: JSX.Element;
+}
+
+const Exchanges:FC<HeaderProps> = ({title, pageIcon}) => {
     return(
-        <h1>Exchanges</h1>
+        <Header title={title} pageIcon={pageIcon} />
     )
 };
 

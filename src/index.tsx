@@ -10,6 +10,14 @@ import Stock from "./pages/Stock";
 import Exchanges from "./pages/Exchanges";
 import Repairs from "./pages/Repairs";
 import Demos from "./pages/Demos";
+import {
+    ArrowsRightLeftIcon as ExchangeIcon,
+    BuildingStorefrontIcon as StockIcon,
+    CubeIcon as OrderIcon,
+    TagIcon as DemoIcon,
+    WrenchScrewdriverIcon as RepairIcon,
+} from '@heroicons/react/24/outline'
+
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement
@@ -19,12 +27,41 @@ root.render(
         <BrowserRouter>
             <App>
                 <Routes>
-                    <Route path="/" element={<Dashboard/>}/>
-                    <Route path="/orders" element={<Orders />}/>
-                    <Route path="/stock" element={<Stock />}/>
-                    <Route path="/exchanges" element={<Exchanges />}/>
-                    <Route path="/repairs" element={<Repairs />}/>
-                    <Route path="/demos" element={<Demos />}/>
+                    <Route path="/" element={
+                        <Dashboard
+                            title='Dashboard'
+                            pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
+                        /> } />
+
+                    <Route path="/orders" element={
+                        <Orders
+                            title='Orders'
+                            pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
+                        /> } />
+
+                    <Route path="/stock" element={
+                        <Stock
+                            title='Stock'
+                            pageIcon={<StockIcon className="h-9 w-9 text-accent"/>}
+                        /> } />
+
+                    <Route path="/exchanges" element={
+                        <Exchanges
+                            title='Exchanges'
+                            pageIcon={<ExchangeIcon className="h-9 w-9 text-accent"/>}
+                        /> } />
+
+                    <Route path="/repairs" element={
+                        <Repairs
+                            title='Repairs'
+                            pageIcon={<RepairIcon className="h-9 w-9 text-accent"/>}
+                        /> } />
+
+                    <Route path="/demos" element={
+                        <Demos
+                            title='Orders'
+                            pageIcon={<DemoIcon className="h-9 w-9 text-accent"/>}
+                        /> } />
                 </Routes>
             </App>
         </BrowserRouter>
