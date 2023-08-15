@@ -31,7 +31,7 @@ export const lastOrders = [
     {
         orderInfo: {
             number: 3311,
-            date: '16/08/2023',
+            orderDate: '16/08/2023',
             products: [
                 'Home suit XL',
             ],
@@ -51,6 +51,33 @@ export const lastOrders = [
                 houseNumber: 6,
                 city: 'Luzern',
                 postNumber: 6003,
+            },
+        },
+
+    },
+    {
+        orderInfo: {
+            number: 3312,
+            orderDate: '17/08/2023',
+            products: [
+                'Home suit 2XL',
+            ],
+            paymentMethod: {
+                type: 'Debit card',
+                parcels: 1,
+            },
+            clientComment: '',
+            orderStatus: 'Completed',
+            sendDate: '20/08/2023'
+        },
+        clientInfo: {
+            pronoun: 'Sir',
+            name: 'Martin Harold',
+            adress: {
+                street: 'Helvetiastrasse',
+                houseNumber: 23,
+                city: 'Bern',
+                postNumber: 3005,
             },
         },
 

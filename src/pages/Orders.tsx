@@ -1,3 +1,5 @@
+import OrderRow from "../components/OrderRow";
+import {lastOrders} from "../data/orders";
 
 const Orders = () => {
     return (
@@ -9,9 +11,9 @@ const Orders = () => {
                 </div>
             </div>
 
-            <div className="container-center mt-16 mb-4">
-                <div className="grid grid-cols-6 justify-items-center">
-                    <span className="col-span-2 text-sm font-medium text-neutral-400">Customer</span>
+            <div className="container-center mt-16 mb-4 p-1">
+                <div className="grid grid-cols-5 justify-items-center">
+                    <span className="text-sm font-medium text-neutral-400">Customer</span>
                     <span className="text-sm font-medium text-neutral-400">Status</span>
                     <span className="text-sm font-medium text-neutral-400">Products</span>
                     <span className="text-sm font-medium text-neutral-400">Order date</span>
@@ -20,10 +22,21 @@ const Orders = () => {
             </div>
 
             <div className="container-center">
-                List of orders
+                {
+                    lastOrders.map(lastorder => (
+                        <OrderRow
+                            clientName={lastorder.clientInfo.name}
+                            clientAdress={`${lastorder.clientInfo.adress.street}, ${lastorder.clientInfo.adress.city}`}
+                            products={lastorder.orderInfo.products}
+                            orderDate={lastorder.orderInfo.orderDate}
+                            sendDate={lastorder.orderInfo.sendDate}
+                            orderStatus={lastorder.orderInfo.orderStatus}
+                        />
+                    ))
+                }
             </div>
         </>
-    )
+    );
 };
 
 export default Orders;
