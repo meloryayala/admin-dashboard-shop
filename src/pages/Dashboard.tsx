@@ -11,7 +11,7 @@ const Dashboard:FC<HeaderProps> = ({title, pageIcon}) => {
   return(
       <div className="container-center">
           <Header title={title} pageIcon={pageIcon} />
-          <div className="grid grid-cols-4 gap-4">
+          <div className="grid grid-cols-4 gap-4 my-6">
             Hello
           </div>
       </div>

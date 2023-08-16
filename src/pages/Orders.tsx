@@ -1,6 +1,6 @@
 import {FC, JSX} from "react";
 import {lastOrders} from "../data/orders";
-import OrderRow from "../components/Orders/OrderRow";
+import OrderRow from "../components/Order/OrderRow";
 import Header from "../components/Header";
 
 interface HeaderProps {
@@ -35,7 +35,8 @@ const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
                     lastOrders.map(lastOrder => (
                         <OrderRow
                             clientName={lastOrder.clientInfo.name}
-                            clientAdress={`${lastOrder.clientInfo.adress.street}, ${lastOrder.clientInfo.adress.city}`}
+                            cityAdress={lastOrder.clientInfo.cityAdress}
+                            streetAdress={lastOrder.clientInfo.streetAdress}
                             products={lastOrder.orderInfo.products}
                             orderDate={lastOrder.orderInfo.orderDate}
                             sendDate={lastOrder.orderInfo.sendDate}

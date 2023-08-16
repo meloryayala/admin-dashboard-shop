@@ -1,4 +1,3 @@
-
 export const lastOrders = [
     {
         orderInfo: {
@@ -8,10 +7,9 @@ export const lastOrders = [
                 'Pro suit XS',
                 'Pro powerbox',
             ],
-            paymentMethod: {
-                type: 'Credit card',
-                parcels: 1,
-            },
+            paymentMethod: 'Credit card',
+            paymentParcels: 1,
+
             clientComment: '',
             orderStatus: 'Pending',
             sendDate: '-',
@@ -19,12 +17,10 @@ export const lastOrders = [
         clientInfo: {
             pronoun: 'Sir',
             name: 'Paul Müller',
-            adress: {
-                street: 'Höschgasse',
-                houseNumber: 70,
-                city: 'Zurich',
-                postNumber: 8008,
-            },
+            streetAdress: 'Höschgasse',
+            numberAdress: 70,
+            cityAdress: 'Zurich',
+            postNumberAdress: 8008,
         },
 
     },
@@ -35,10 +31,9 @@ export const lastOrders = [
             products: [
                 'Home suit XL',
             ],
-            paymentMethod: {
-                type: 'Credit card',
-                parcels: 2,
-            },
+            paymentMethod: 'Credit card',
+            paymentParcels: 2,
+
             clientComment: '',
             orderStatus: 'Completed',
             sendDate: '18/08/2023'
@@ -46,12 +41,10 @@ export const lastOrders = [
         clientInfo: {
             pronoun: 'Madam',
             name: 'Livia Lopez',
-            adress: {
-                street: 'Dornacherstrasse',
-                houseNumber: 6,
-                city: 'Luzern',
-                postNumber: 6003,
-            },
+            streetAdress: 'Dornacherstrasse',
+            numberAdress: 6,
+            cityAdress: 'Luzern',
+            postNumberAdress: 6003,
         },
 
     },
@@ -62,10 +55,9 @@ export const lastOrders = [
             products: [
                 'Home suit 2XL',
             ],
-            paymentMethod: {
-                type: 'Debit card',
-                parcels: 1,
-            },
+            paymentMethod: 'Debit card',
+            paymentParcels: 1,
+
             clientComment: '',
             orderStatus: 'Completed',
             sendDate: '20/08/2023'
@@ -73,12 +65,10 @@ export const lastOrders = [
         clientInfo: {
             pronoun: 'Sir',
             name: 'Martin Harold',
-            adress: {
-                street: 'Helvetiastrasse',
-                houseNumber: 23,
-                city: 'Bern',
-                postNumber: 3005,
-            },
+            streetAdress: 'Helvetiastrasse',
+            numberAdress: 23,
+            cityAdress: 'Bern',
+            postNumberAdress: 3005,
         },
 
     },

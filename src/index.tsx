@@ -30,37 +30,37 @@ root.render(
                     <Route path="/" element={
                         <Dashboard
                             title='Dashboard'
-                            pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
+                            pageIcon={<OrderIcon className="h-9 w-9 "/>}
                         /> } />
 
                     <Route path="/orders" element={
                         <Orders
                             title='Orders'
-                            pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
+                            pageIcon={<OrderIcon className="h-9 w-9 "/>}
                         /> } />
 
                     <Route path="/stock" element={
                         <Stock
                             title='Stock'
-                            pageIcon={<StockIcon className="h-9 w-9 text-accent"/>}
+                            pageIcon={<StockIcon className="h-9 w-9"/>}
                         /> } />
 
                     <Route path="/exchanges" element={
                         <Exchanges
                             title='Exchanges'
-                            pageIcon={<ExchangeIcon className="h-9 w-9 text-accent"/>}
+                            pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-500"/>}
                         /> } />
 
                     <Route path="/repairs" element={
                         <Repairs
                             title='Repairs'
-                            pageIcon={<RepairIcon className="h-9 w-9 text-accent"/>}
+                            pageIcon={<RepairIcon className="h-9 w-9 text-pink-500"/>}
                         /> } />
 
                     <Route path="/demos" element={
                         <Demos
                             title='Orders'
-                            pageIcon={<DemoIcon className="h-9 w-9 text-accent"/>}
+                            pageIcon={<DemoIcon className="h-9 w-9 text-violet-500"/>}
                         /> } />
                 </Routes>
             </App>
