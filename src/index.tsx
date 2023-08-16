@@ -6,7 +6,7 @@ import './styles/global.css'
 import Orders from "./pages/Orders";
 import Dashboard from "./pages/Dashboard";
 import App from "./templates/App";
-import Stock from "./pages/Stock";
+import Stock from "./pages/Stock/Stock";
 import Exchanges from "./pages/Exchanges";
 import Repairs from "./pages/Repairs";
 import Demos from "./pages/Demos";

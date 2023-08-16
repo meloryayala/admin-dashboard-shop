@@ -1,3 +1,4 @@
+
 export const stock = [
     {
         productId: 3001,
@@ -47,32 +48,32 @@ export const stock = [
     {
         productId: 3010,
         productName: 'Home suit XXS',
-        stockQuantity: 15,
+        stockQuantity: 10,
     },
     {
         productId: 3011,
         productName: 'Home suit XS',
-        stockQuantity: 10,
+        stockQuantity: 9,
     },
     {
         productId: 3012,
         productName: 'Home suit S',
-        stockQuantity: 9,
+        stockQuantity: 7,
     },
     {
         productId: 3013,
         productName: 'Home suit M',
-        stockQuantity: 6,
+        stockQuantity: 9,
     },
     {
         productId: 3014,
         productName: 'Home suit L',
-        stockQuantity: 8,
+        stockQuantity: 12,
     },
     {
         productId: 3015,
         productName: 'Home suit XL',
-        stockQuantity: 5,
+        stockQuantity: 4,
     },
     {
         productId: 3016,
@@ -82,12 +83,12 @@ export const stock = [
     {
         productId: 3017,
         productName: 'Home suit 3XL',
-        stockQuantity: 4,
+        stockQuantity: 5,
     },
     {
         productId: 3018,
         productName: 'Home suit 4XL',
-        stockQuantity: 3,
+        stockQuantity: 7,
     },
     {
         productId: 3019,
@@ -110,73 +111,78 @@ export const stock = [
         stockQuantity: 6,
     },
     {
-        productId: 3022,
-        productName: 'Pants suit L',
+        productId: 3023,
+        productName: 'Pants suit XL',
         stockQuantity: 6,
     },
     {
-        productId: 3023,
+        productId: 3024,
         productName: 'Sling trainer Allround',
         stockQuantity: 5,
     },
     {
-        productId: 3024,
+        productId: 3025,
         productName: 'Sling trainer Exclusive',
         stockQuantity: 6,
     },
     {
-        productId: 3023,
-        productName: 'Sling trainer Allround',
-        stockQuantity: 5,
-    },
-    {
-        productId: 3024,
+        productId: 3026,
         productName: 'Pull up bar oil 60cm',
         stockQuantity: 4,
     },
     {
-        productId: 3025,
+        productId: 3027,
         productName: 'Pull up bar oil 100cm',
         stockQuantity: 3,
     },
     {
-        productId: 3026,
-        productName: 'Pull up bar no-oil 60cm',
+        productId: 3028,
+        productName: 'Pull up bar natur 60cm',
         stockQuantity: 2,
     },
     {
-        productId: 3027,
-        productName: 'Pull up bar no-oil 100cm',
+        productId: 3029,
+        productName: 'Pull up bar natur 100cm',
         stockQuantity: 4,
     },
     {
-        productId: 3028,
+        productId: 3030,
         productName: 'Fitness band 25cm',
         stockQuantity: 4,
     },
     {
-        productId: 3029,
+        productId: 3031,
         productName: 'Fitness band 35cm',
         stockQuantity: 2,
     },
     {
-        productId: 3030,
+        productId: 3032,
         productName: 'Carabiner',
         stockQuantity: 2,
     },
     {
-        productId: 3031,
+        productId: 3033,
         productName: 'Fastening band',
         stockQuantity: 3,
     },
     {
-       productId: 3032,
+       productId: 3034,
         productName: 'Roof mounting',
         stockQuantity: 3,
     },
     {
-        productId: 3033,
+        productId: 3035,
         productName: 'EMS belt',
         stockQuantity: 6,
+    },
+    {
+        productId: 3036,
+        productName: 'Pro powerbox',
+        stockQuantity: 10,
+    },
+    {
+        productId: 3037,
+        productName: 'Home powerbox',
+        stockQuantity: 8,
     },
 ]
