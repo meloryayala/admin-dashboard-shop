@@ -1,6 +1,5 @@
 import {FC, useState} from "react";
-import {Products} from "../pages/Stock/productsEnum";
-import {stock} from "../data/stock";
+import {Products} from "./productsEnum";
 
 interface ProductInfo {
     productId?: Products;
@@ -11,11 +10,11 @@ interface ProductInfo {
 interface InputProps {
     product: ProductInfo;
     disabled?: boolean;
+    fieldStyle: string;
 }
 
 
-const InputStock: FC<InputProps> = ({product, disabled}) => {
-    const fieldStyle = 'input input-ghost input-sm w-10/12 max-w-xs'
+const InputStock: FC<InputProps> = ({product, disabled, fieldStyle}) => {
     const [field, setField] = useState(product.stockQuantity)
 
     return (

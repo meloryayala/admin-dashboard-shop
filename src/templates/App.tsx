@@ -1,5 +1,5 @@
 import {FC, ReactNode} from "react";
-import Drawer from "../components/Drawew";
+import Drawer from "../components/Drawer";
 
 interface TemplateProps {
     children: ReactNode
