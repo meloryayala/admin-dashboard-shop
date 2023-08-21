@@ -42,8 +42,8 @@ root.render(
 
                     <Route path="/orders/details/:orderNumber" element={
                         <OrderDetails
-                            title='Order Details'
-                            pageIcon={<OrderIcon className="h-9 w-9 "/>}
+                            title='Order'
+                            pageIcon={<OrderIcon className="h-9 w-9 text-warning"/>}
                         /> } />
 
                     <Route path="/stock" element={
