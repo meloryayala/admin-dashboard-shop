@@ -17,6 +17,7 @@ import {
     TagIcon as DemoIcon,
     WrenchScrewdriverIcon as RepairIcon,
 } from '@heroicons/react/24/outline'
+import OrderDetails from "./pages/OrderDetails";
 
 
 const root = ReactDOM.createRoot(
@@ -36,6 +37,12 @@ root.render(
                     <Route path="/orders" element={
                         <Orders
                             title='Orders'
+                            pageIcon={<OrderIcon className="h-9 w-9 "/>}
+                        /> } />
+
+                    <Route path="/orders/details/:orderNumber" element={
+                        <OrderDetails
+                            title='Order Details'
                             pageIcon={<OrderIcon className="h-9 w-9 "/>}
                         /> } />
 
@@ -62,6 +69,7 @@ root.render(
                             title='Orders'
                             pageIcon={<DemoIcon className="h-9 w-9 text-violet-500"/>}
                         /> } />
+
                 </Routes>
             </App>
         </BrowserRouter>

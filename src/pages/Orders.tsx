@@ -34,13 +34,15 @@ const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
                 {
                     lastOrders.map(lastOrder => (
                         <OrderRow
+                            key={lastOrder.orderNumber}
                             clientName={lastOrder.clientInfo.name}
                             cityAdress={lastOrder.clientInfo.cityAdress}
                             streetAdress={lastOrder.clientInfo.streetAdress}
-                            products={lastOrder.orderInfo.products}
-                            orderDate={lastOrder.orderInfo.orderDate}
-                            sendDate={lastOrder.orderInfo.sendDate}
-                            orderStatus={lastOrder.orderInfo.orderStatus}
+                            products={lastOrder.products}
+                            orderDate={lastOrder.orderDate}
+                            sendDate={lastOrder.sendDate}
+                            orderStatus={lastOrder.orderStatus}
+                            orderNumber={lastOrder.orderNumber}
                         />
                     ))
                 }

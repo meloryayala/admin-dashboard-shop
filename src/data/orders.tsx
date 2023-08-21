@@ -1,19 +1,17 @@
 export const lastOrders = [
     {
-        orderInfo: {
-            number: 3310,
-            orderDate: '15/08/2023',
-            products: [
-                'Pro suit XS',
-                'Pro powerbox',
-            ],
-            paymentMethod: 'Credit card',
-            paymentParcels: 1,
+        orderNumber: 3310,
+        orderDate: '15/08/2023',
+        products: [
+            'Pro suit XS',
+            'Pro powerbox',
+        ],
+        paymentMethod: 'Credit card',
+        paymentParcels: 1,
 
-            clientComment: '',
-            orderStatus: 'Pending',
-            sendDate: '-',
-        },
+        clientComment: '',
+        orderStatus: 'Pending',
+        sendDate: '-',
         clientInfo: {
             pronoun: 'Sir',
             name: 'Paul Müller',
@@ -25,19 +23,18 @@ export const lastOrders = [
 
     },
     {
-        orderInfo: {
-            number: 3311,
-            orderDate: '16/08/2023',
-            products: [
-                'Home suit XL',
-            ],
-            paymentMethod: 'Credit card',
-            paymentParcels: 2,
+        orderNumber: 3311,
+        orderDate: '16/08/2023',
+        products: [
+            'Home suit XL',
+        ],
+        paymentMethod: 'Credit card',
+        paymentParcels: 2,
 
-            clientComment: '',
-            orderStatus: 'Completed',
-            sendDate: '18/08/2023'
-        },
+        clientComment: '',
+        orderStatus: 'Completed',
+        sendDate: '18/08/2023',
+
         clientInfo: {
             pronoun: 'Madam',
             name: 'Livia Lopez',
@@ -49,19 +46,17 @@ export const lastOrders = [
 
     },
     {
-        orderInfo: {
-            number: 3312,
-            orderDate: '17/08/2023',
-            products: [
-                'Home suit 2XL',
-            ],
-            paymentMethod: 'Debit card',
-            paymentParcels: 1,
+        orderNumber: 3312,
+        orderDate: '17/08/2023',
+        products: [
+            'Home suit 2XL',
+        ],
+        paymentMethod: 'Debit card',
+        paymentParcels: 1,
 
-            clientComment: '',
-            orderStatus: 'Completed',
-            sendDate: '20/08/2023'
-        },
+        clientComment: '',
+        orderStatus: 'Completed',
+        sendDate: '20/08/2023',
         clientInfo: {
             pronoun: 'Sir',
             name: 'Martin Harold',
