@@ -8,9 +8,6 @@ interface HeaderProps {
 
 const Header: FC<HeaderProps> = ({ title, pageIcon}) => {
     const location = useLocation()
-
-    console.log(location)
-
      return (
          <>
          {

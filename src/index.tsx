@@ -43,7 +43,7 @@ root.render(
                     <Route path="/orders/details/:orderNumber" element={
                         <OrderDetails
                             title='Order'
-                            pageIcon={<OrderIcon className="h-9 w-9 text-warning"/>}
+                            pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
                         /> } />
 
                     <Route path="/stock" element={

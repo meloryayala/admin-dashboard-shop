@@ -54,7 +54,7 @@ export const lastOrders = [
         paymentMethod: 'Debit card',
         paymentParcels: 1,
 
-        clientComment: '',
+        clientComment: 'Comment made by the client regarding the ordered items.',
         orderStatus: 'Completed',
         sendDate: '20/08/2023',
         clientInfo: {
