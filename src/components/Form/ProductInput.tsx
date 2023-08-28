@@ -17,6 +17,7 @@ const ProductInput: FC<ProductInputProps> = ({label, value}) => {
                 value?.map(product =>
                     <input
                         type="text"
+                        key={label}
                         value={product}
                         className="input input-bordered w-full my-1"
                         disabled
