@@ -3,6 +3,7 @@ import {lastOrders} from "../data/orders";
 import OrderRow from "../components/Order/OrderRow";
 import Header from "../components/Header";
 import TableTittle from "../components/Order/TableTittle";
+import SearchBar from "../components/Form/SearchBar";
 
 interface HeaderProps {
     title: string;
@@ -13,13 +14,7 @@ const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
     return (
         <>
             <Header title={title} pageIcon={pageIcon} />
-
-            <div className="container-center my-6">
-                <div className="join flex">
-                    <input className="input join-item w-full" placeholder="Search"/>
-                    <button className="btn join-item bg-lime-300">Search</button>
-                </div>
-            </div>
+            <SearchBar placeholder="Search an order" />
 
             <div className="container-center mt-16 mb-4 p-1">
                 <div className="grid grid-cols-5 justify-items-center">
