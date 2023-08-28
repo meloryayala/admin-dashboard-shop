@@ -1,4 +1,4 @@
-import {stock} from "../../data/stock";
+import {stock} from "../data/stock";
 
 export const getProduct = (id: number) => {
     const product = stock.find(p => p.productId === id);

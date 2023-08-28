@@ -1,7 +1,7 @@
 import {PencilSquareIcon as EditIcon} from "@heroicons/react/24/solid";
 import InputStock from "../../components/Stock/InputStock";
 import {Products} from "./productsEnum";
-import {getProduct} from "./fnGetProduct";
+import {getProduct} from "../../utils/fnGetProduct";
 import TableTittle from "../Order/TableTittle";
 
 const SuitsStock = () => {

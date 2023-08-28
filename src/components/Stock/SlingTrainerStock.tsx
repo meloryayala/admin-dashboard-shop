@@ -2,7 +2,7 @@ import {PencilSquareIcon as EditIcon} from "@heroicons/react/24/solid";
 import InputStock from "../../components/Stock/InputStock";
 import {Products} from "./productsEnum";
 import React from "react";
-import {getProduct} from "./fnGetProduct";
+import {getProduct} from "../../utils/fnGetProduct";
 
 const SlingTrainerStock = () => {
     const fieldStyle = 'input input-ghost input-sm w-11/12 col-span-4'
