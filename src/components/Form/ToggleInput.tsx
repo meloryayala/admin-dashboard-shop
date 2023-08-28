@@ -1,11 +1,11 @@
 import {FC} from "react";
 
-interface ToogleInputProps {
+interface ToggleInputProps {
     label: string;
     action: string
 }
 
-const ToogleInput: FC<ToogleInputProps> = ({label, action}) => {
+const ToggleInput: FC<ToggleInputProps> = ({label, action}) => {
     return (
         <div>
             <label className="label">
@@ -22,4 +22,4 @@ const ToogleInput: FC<ToogleInputProps> = ({label, action}) => {
     )
 }
 
-export default ToogleInput;
+export default ToggleInput;

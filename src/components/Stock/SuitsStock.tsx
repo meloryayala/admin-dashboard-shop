@@ -1,8 +1,8 @@
-import {PencilSquareIcon as EditIcon} from "@heroicons/react/24/solid";
 import InputStock from "../../components/Stock/InputStock";
-import {Products} from "./productsEnum";
+import {Products} from "../../utils/productsEnum";
 import {getProduct} from "../../utils/fnGetProduct";
 import TableTittle from "../Order/TableTittle";
+import StockTitle from "./StockTitle";
 
 const SuitsStock = () => {
     const fieldStyle = 'input input-ghost input-sm w-11/12'
@@ -10,12 +10,7 @@ const SuitsStock = () => {
     return (
         <>
             <div className="card block mt-10 mb-4 bg-base-100 p-5">
-                <div className="flex justify-between mb-4">
-                    <h2 className="text-xl font-medium">EMS suits</h2>
-                    <button className="btn btn-ghost">
-                        <EditIcon className="h- w-6"/>
-                    </button>
-                </div>
+                <StockTitle title="EMS Suits" />
 
                 <div className="container-center p-1">
                     <div className="grid grid-cols-10 justify-items-center">
