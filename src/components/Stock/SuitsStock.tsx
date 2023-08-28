@@ -2,6 +2,7 @@ import {PencilSquareIcon as EditIcon} from "@heroicons/react/24/solid";
 import InputStock from "../../components/Stock/InputStock";
 import {Products} from "./productsEnum";
 import {getProduct} from "./fnGetProduct";
+import TableTittle from "../Order/TableTittle";
 
 const SuitsStock = () => {
     const fieldStyle = 'input input-ghost input-sm w-11/12'
@@ -19,15 +20,15 @@ const SuitsStock = () => {
                 <div className="container-centerp-1">
                     <div className="grid grid-cols-10 justify-items-center">
                         <div></div>
-                        <h4 className="text-sm font-medium text-secondary-content/50">XXS</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">XS</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">S</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">M</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">L</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">XL</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">XXL</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">3XL</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50">4XL</h4>
+                        <TableTittle spanTitle="XXS" />
+                        <TableTittle spanTitle="XS" />
+                        <TableTittle spanTitle="S" />
+                        <TableTittle spanTitle="M" />
+                        <TableTittle spanTitle="L" />
+                        <TableTittle spanTitle="XL" />
+                        <TableTittle spanTitle="XXL" />
+                        <TableTittle spanTitle="3XL" />
+                        <TableTittle spanTitle="4XL" />
                     </div>
                 </div>
 

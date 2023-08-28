@@ -2,6 +2,7 @@ import {PencilSquareIcon as EditIcon} from "@heroicons/react/24/solid";
 import InputStock from "../../components/Stock/InputStock";
 import {Products} from "./productsEnum";
 import {getProduct} from "./fnGetProduct";
+import TableTittle from "../Order/TableTittle";
 
 const SuitsStock = () => {
     const fieldStyle = 'input input-ghost input-sm w-10/12 col-span-2'
@@ -19,8 +20,8 @@ const SuitsStock = () => {
                 <div className="container-center p-1">
                     <div className="grid grid-cols-5 justify-items-center">
                         <div></div>
-                        <h4 className="text-sm font-medium text-secondary-content/50 col-span-2">60 cm</h4>
-                        <h4 className="text-sm font-medium text-secondary-content/50 col-span-2">100cm</h4>
+                        <TableTittle spanTitle="60 cm" isColSpan="col-span-2" />
+                        <TableTittle spanTitle="100 cm" isColSpan="col-span-2" />
                     </div>
                 </div>
 

@@ -2,6 +2,7 @@ import {FC, JSX} from "react";
 import {lastOrders} from "../data/orders";
 import OrderRow from "../components/Order/OrderRow";
 import Header from "../components/Header";
+import TableTittle from "../components/Order/TableTittle";
 
 interface HeaderProps {
     title: string;
@@ -22,11 +23,11 @@ const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
 
             <div className="container-center mt-16 mb-4 p-1">
                 <div className="grid grid-cols-5 justify-items-center">
-                    <span className="text-sm font-medium text-neutral-400">Customer</span>
-                    <span className="text-sm font-medium text-neutral-400">Status</span>
-                    <span className="text-sm font-medium text-neutral-400">Products</span>
-                    <span className="text-sm font-medium text-neutral-400">Order date</span>
-                    <span className="text-sm font-medium text-neutral-400">Send date</span>
+                    <TableTittle spanTitle="Customer" />
+                    <TableTittle spanTitle="Status" />
+                    <TableTittle spanTitle="Products" />
+                    <TableTittle spanTitle="Order date" />
+                    <TableTittle spanTitle="Send date" />
                 </div>
             </div>
 
