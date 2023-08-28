@@ -31,6 +31,7 @@ const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
             </div>
 
             <div className="container-center">
+                <ul>
                 {
                     lastOrders.map(lastOrder => (
                         <OrderRow
@@ -46,6 +47,7 @@ const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
                         />
                     ))
                 }
+                </ul>
             </div>
         </>
     );

@@ -15,7 +15,8 @@ interface OrderStatusProp {
 
 const OrderRow:FC<OrderStatusProp> = ({clientName,streetAdress,cityAdress,products, orderDate, sendDate, orderStatus, orderNumber}) => {
 return(
-    <Link to={`/orders/details/${orderNumber}`}>
+    <li>
+     <Link to={`/orders/details/${orderNumber}`}>
        <div className="alert grid grid-cols-5 bg-base-100 justify-items-center content-center my-2">
         <div className="justify-self-start pl-3">
             <h3 className="text-base font-medium">{clientName}</h3>
@@ -26,8 +27,9 @@ return(
         <div>{orderDate}</div>
         <div>{sendDate}</div>
       </div>
-    </Link>
+     </Link>
+    </li>
 )
 }
 
-export default OrderRow
+export default OrderRow;
