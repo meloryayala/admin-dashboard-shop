@@ -16,11 +16,7 @@ interface HeaderProps {
 const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
     const {orderNumber} = useParams();
 
-    const order = lastOrders.find(lastOrder => {
-        if (lastOrder.orderNumber.toString() === orderNumber) {
-            return lastOrder
-        }
-    })
+    const order = lastOrders.find(lastOrder => lastOrder.orderNumber.toString() === orderNumber);
 
     return (
         <>
@@ -28,15 +24,16 @@ const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                 <ArrowLeftIcon className="h-6 w-6"/>
                 Return last orders
             </button>
+
             <div className="form-control">
-                <div className="card bg-base-100 my-2 p-8">
+                <div className="card w-full bg-base-100 p-8 my-2">
                     <div className="flex flex-row justify-between items-center">
                         <Header title={`${title} #${orderNumber}`} pageIcon={pageIcon}/>
                         <h2 className="text-xl font-medium text-base-content/70">DETAILS</h2>
                     </div>
-
                     <div className="divider"></div>
-                    <div className="mt-10 mb-6">
+
+                    <div className="mt-10 mb-6 ">
                         <h3 className="text-sm font-medium text-base-content mb-4">
                             ORDER INFORMATION
                         </h3>
@@ -44,7 +41,7 @@ const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                             <TextInput label="Order number" value={order?.orderNumber} disabled/>
                             <TextInput label="Order date" value={order?.orderDate} disabled/>
                             <TextInput label="Client name" value={order?.clientInfo.name} disabled/>
-                            <SelectInput label="Pronoun" value={order?.clientInfo.pronoun} disabled />
+                            <SelectInput label="Pronoun" value={order?.clientInfo.pronoun} disabled/>
                         </div>
                     </div>
 
@@ -65,14 +62,14 @@ const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                             PRODUCTS
                         </h3>
                         <div className="grid grid-cols-1 gap-4 my-2">
-                            <ProductInput label="Products" value={order?.products} />
+                            <ProductInput label="Products" value={order?.products}/>
 
                         </div>
                     </div>
 
                     <div className="mt-6 mb-6">
                         <div className="grid grid-cols-1 gap-4 my-2">
-                            <ToogleInput label="Ettiquete" action="Sent ettiquete to client" />
+                            <ToogleInput label="Ettiquete" action="Sent ettiquete to client"/>
                         </div>
                     </div>
 
@@ -80,13 +77,13 @@ const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                     <div className="mt-10 mb-6">
                         {
                             order?.orderStatus === 'Completed'
-                            ? (
+                                ? (
                                     <div className="grid grid-cols-2 gap-2">
                                         <button className="btn bg-pink-500 w-full">New exchange</button>
                                         <button className="btn bg-sky-500 w-full">New repair</button>
                                     </div>
                                 )
-                            : (<button className="btn btn-accent w-full">Complete order</button>)
+                                : (<button className="btn btn-accent w-full">Complete order</button>)
                         }
                     </div>
 

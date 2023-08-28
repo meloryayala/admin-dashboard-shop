@@ -9,7 +9,7 @@ const SuitsStock = () => {
 
     return (
         <>
-            <div className=" alert block my-4 bg-base-100 p-5">
+            <div className="card block my-4 bg-base-100 p-5">
                 <div className="flex justify-between">
                     <h2 className="text-xl font-medium">Pull up bars</h2>
                     <button className="btn btn-ghost">

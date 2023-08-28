@@ -8,7 +8,7 @@ const AccessoriesStock = () => {
     const fieldStyle = 'input input-ghost input-sm w-11/12 col-span-4'
     return (
         <>
-            <div className=" alert block my-4 bg-base-100 p-5">
+            <div className="card block my-4 bg-base-100 p-5">
                 <div className="flex justify-between mb-2">
                     <h2 className="text-xl font-medium">Accessories</h2>
                     <button className="btn btn-ghost">
