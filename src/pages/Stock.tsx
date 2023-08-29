@@ -11,7 +11,6 @@ interface StockProps {
 }
 
 const Stock: FC<StockProps> = ({title, pageIcon}) => {
-
     return (
         <>
             <Header title={title} pageIcon={pageIcon}/>

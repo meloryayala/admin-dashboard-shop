@@ -1,12 +1,12 @@
 import {FC, JSX} from "react";
 import {useParams} from "react-router-dom";
 import {ArrowLeftIcon} from "@heroicons/react/20/solid";
-import Header from "../components/Header";
 import TextInput from "../components/Form/TextInput";
 import {lastOrders} from "../data/orders";
 import SelectInput from "../components/Form/SelectInput";
 import ProductInput from "../components/Form/ProductInput";
 import ToggleInput from "../components/Form/ToggleInput";
+import FormHeader from "../components/Form/FormHeader";
 
 interface HeaderProps {
     title: string;
@@ -27,11 +27,7 @@ const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
 
             <form className="form-control">
                 <div className="card w-full bg-base-100 p-8 my-2">
-                    <div className="flex flex-row justify-between items-center">
-                        <Header title={`${title} #${orderNumber}`} pageIcon={pageIcon}/>
-                        <h2 className="text-xl font-medium text-base-content/70">DETAILS</h2>
-                    </div>
-                    <div className="divider"></div>
+                    <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
 
                     <div className="mt-10 mb-6 ">
                         <h3 className="text-sm font-medium text-base-content mb-4">

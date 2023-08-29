@@ -9,7 +9,7 @@ interface ProductInfo {
 
 interface InputProps {
     product: ProductInfo;
-    disabled?: boolean;
+    disabled: boolean;
     fieldStyle: string;
 }
 
