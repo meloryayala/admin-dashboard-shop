@@ -5,8 +5,8 @@ import TextInput from "../components/Form/TextInput";
 import {lastOrders} from "../data/orders";
 import SelectInput from "../components/Form/SelectInput";
 import ProductInput from "../components/Form/ProductInput";
-import ToggleInput from "../components/Form/ToggleInput";
 import FormHeader from "../components/Form/FormHeader";
+import SubmitButton from "../components/Form/SubmitButton";
 
 interface HeaderProps {
     title: string;
@@ -63,23 +63,16 @@ const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                         </div>
                     </div>
 
-                    <div className="mt-6 mb-6">
-                        <div className="grid grid-cols-1 gap-4 my-2">
-                            <ToggleInput label="Ettiquete" action="Sent ettiquete to client"/>
-                        </div>
-                    </div>
-
-
                     <div className="mt-10 mb-6">
                         {
                             order?.orderStatus === 'Completed'
                                 ? (
                                     <div className="grid grid-cols-2 gap-2">
-                                        <button className="btn bg-pink-200 w-full">New exchange</button>
-                                        <button className="btn bg-sky-200 w-full">New repair</button>
+                                        <SubmitButton buttonTitle="New exchange" color="bg-sky-200" />
+                                        <SubmitButton buttonTitle="New repair" color="bg-pink-200" />
                                     </div>
                                 )
-                                : (<button className="btn btn-accent w-full">Complete order</button>)
+                                : (<SubmitButton buttonTitle="Complete order" color="bg-accent" />)
                         }
                     </div>
 
