@@ -1,8 +1,8 @@
 import {FC, JSX} from "react";
 import {lastOrders} from "../data/orders";
-import OrderRow from "../components/Order/OrderRow";
+import OrderRow from "../components/lists/RowLists/OrderRow";
 import Header from "../components/Header";
-import TableTittle from "../components/Order/TableTittle";
+import TableTittle from "../components/lists/TableTittle";
 import SearchBar from "../components/Form/SearchBar";
 
 interface HeaderProps {

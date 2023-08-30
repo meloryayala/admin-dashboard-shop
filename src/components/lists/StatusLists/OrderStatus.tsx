@@ -11,8 +11,8 @@ const OrderStatus: FC<OrderStatusProps> = ({orderStatus}) => {
     return (
         <div className={
             orderStatus === 'Completed'
-                ? 'badge badge-outline badge-success bg-teal-50 p-4 w-full'
-                : 'badge badge-outline badge-warning bg-amber-50 p-4 w-full'
+                ? 'badge badge-outline badge-success bg-teal-50 p-4 w-full space-x-2'
+                : 'badge badge-outline badge-warning bg-amber-50 p-4 w-full space-x-2'
         }>
             {
                 orderStatus === 'Completed'

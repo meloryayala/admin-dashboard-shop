@@ -2,10 +2,10 @@ const lastExchanges = [
     {
         orderNumber: 3320,
         orderDate: '20/01/2023',
-        productsClientHas: 'Pro suit XS',
+        productClientHas: 'Pro suit XS',
         productClientNeed: 'Pro suit XXS',
         clientComment: 'Comment made by the client regarding the ordered items.',
-        currentExchangeStatus: 'Open exchange',
+        exchangeStatus: 'Open exchange',
         dateHistoric: {
             openExchange: '20/02/2023',
             sendArticle: '',
@@ -23,10 +23,10 @@ const lastExchanges = [
     {
         orderNumber: 3350,
         orderDate: '15/02/2023',
-        productsClientHas: 'Pro suit XL',
+        productClientHas: 'Pro suit XL',
         productClientNeed: 'Pro suit L',
         clientComment: '',
-        currentExchangeStatus: 'Send article',
+        exchangeStatus: 'Send article',
         dateHistoric: {
             openExchange: '15/04/2023',
             sendArticle: '20/06/2023',
@@ -45,9 +45,9 @@ const lastExchanges = [
     {
         orderNumber: 3340,
         orderDate: '20/01/2023',
-        productsClientHas: 'Home suit M',
+        productClientHas: 'Home suit M',
         productClientNeed: 'Home suit S',
-        currentExchangeStatus: 'Completed',
+        exchangeStatus: 'Completed',
         dateHistoric: {
             openExchange: '10/01/2023',
             sendArticle: '15/02/2023',

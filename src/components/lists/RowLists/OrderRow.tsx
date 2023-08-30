@@ -1,5 +1,5 @@
 import {FC} from "react";
-import OrderStatus from "./OrderStatus";
+import OrderStatus from "../StatusLists/OrderStatus";
 import {Link} from "react-router-dom";
 
 interface OrderStatusProp {

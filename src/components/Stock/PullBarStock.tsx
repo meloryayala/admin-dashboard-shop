@@ -1,7 +1,7 @@
 import InputStock from "../../components/Stock/InputStock";
 import {Products} from "../../utils/productsEnum";
 import {getProduct} from "../../utils/fnGetProduct";
-import TableTittle from "../Order/TableTittle";
+import TableTittle from "../lists/TableTittle";
 import StockTitle from "./StockTitle";
 import {useState} from "react";
 
