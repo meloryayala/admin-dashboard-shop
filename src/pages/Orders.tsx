@@ -6,8 +6,8 @@ import TableTittle from "../components/Order/TableTittle";
 import SearchBar from "../components/Form/SearchBar";
 
 interface HeaderProps {
-    title: string;
-    pageIcon: JSX.Element;
+    title?: string;
+    pageIcon?: JSX.Element;
 }
 
 const Orders:FC<HeaderProps> = ({title, pageIcon}) => {

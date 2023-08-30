@@ -26,52 +26,52 @@ const root = ReactDOM.createRoot(
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <App>
-                <Routes>
-                    <Route path="/" element={
-                        <Dashboard
-                            title='Dashboard'
-                            pageIcon={<OrderIcon className="h-9 w-9 "/>}
-                        /> } />
+                <App>
+                    <Routes>
+                        <Route path="/" element={
+                            <Dashboard
+                                title='Dashboard'
+                                pageIcon={<OrderIcon className="h-9 w-9 "/>}
+                            />}/>
 
-                    <Route path="/orders" element={
-                        <Orders
-                            title='Orders'
-                            pageIcon={<OrderIcon className="h-9 w-9 "/>}
-                        /> } />
+                        <Route path="/orders" element={
+                            <Orders
+                                title='Orders'
+                                pageIcon={<OrderIcon className="h-9 w-9 "/>}
+                            />}/>
 
-                    <Route path="/orders/details/:orderNumber" element={
-                        <OrderDetails
-                            title='Order'
-                            pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
-                        /> } />
+                        <Route path="/orders/details/:orderNumber" element={
+                            <OrderDetails
+                                title='Order'
+                                pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
+                            />}/>
 
-                    <Route path="/stock" element={
-                        <Stock
-                            title='Stock'
-                            pageIcon={<StockIcon className="h-9 w-9"/>}
-                        /> } />
+                        <Route path="/stock" element={
+                            <Stock
+                                title='Stock'
+                                pageIcon={<StockIcon className="h-9 w-9"/>}
+                            />}/>
 
-                    <Route path="/exchanges" element={
-                        <Exchanges
-                            title='Exchanges'
-                            pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-500"/>}
-                        /> } />
+                        <Route path="/exchanges" element={
+                            <Exchanges
+                                title='Exchanges'
+                                pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-500"/>}
+                            />}/>
 
-                    <Route path="/repairs" element={
-                        <Repairs
-                            title='Repairs'
-                            pageIcon={<RepairIcon className="h-9 w-9 text-pink-500"/>}
-                        /> } />
+                        <Route path="/repairs" element={
+                            <Repairs
+                                title='Repairs'
+                                pageIcon={<RepairIcon className="h-9 w-9 text-pink-500"/>}
+                            />}/>
 
-                    <Route path="/demos" element={
-                        <Demos
-                            title='Orders'
-                            pageIcon={<DemoIcon className="h-9 w-9 text-violet-500"/>}
-                        /> } />
+                        <Route path="/demos" element={
+                            <Demos
+                                title='Orders'
+                                pageIcon={<DemoIcon className="h-9 w-9 text-violet-500"/>}
+                            />}/>
 
-                </Routes>
-            </App>
+                    </Routes>
+                </App>
         </BrowserRouter>
     </React.StrictMode>
 );

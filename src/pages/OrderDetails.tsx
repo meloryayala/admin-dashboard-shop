@@ -1,12 +1,12 @@
 import {FC, JSX} from "react";
-import {useParams} from "react-router-dom";
-import {ArrowLeftIcon} from "@heroicons/react/20/solid";
+import {useNavigate, useParams} from "react-router-dom";
 import TextInput from "../components/Form/TextInput";
 import {lastOrders} from "../data/orders";
 import SelectInput from "../components/Form/SelectInput";
 import ProductInput from "../components/Form/ProductInput";
 import FormHeader from "../components/Form/FormHeader";
 import SubmitButton from "../components/Form/SubmitButton";
+import ReturnButton from "../components/Form/ReturnButton";
 
 interface HeaderProps {
     title: string;
@@ -15,15 +15,17 @@ interface HeaderProps {
 
 const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
     const {orderNumber} = useParams();
+    const navigate = useNavigate()
+
+    const handleReturnPage = ()  => {
+        navigate('/orders');
+    }
 
     const order = lastOrders.find(lastOrder => lastOrder.orderNumber.toString() === orderNumber);
 
     return (
         <>
-            <button className="btn btn-ghost">
-                <ArrowLeftIcon className="h-6 w-6"/>
-                Return last orders
-            </button>
+            <ReturnButton onClick={handleReturnPage} />
 
             <form className="form-control">
                 <div className="card w-full bg-base-100 p-8 my-2">
