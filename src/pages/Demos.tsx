@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import TableTittle from "../components/lists/TableTittle";
 import lastDemos from "../data/demos";
 import DemoRow from "../components/lists/RowLists/DemoRow";
-import NewCaseButton from "../components/lists/NewCaseButton";
+import NewCaseButton from "../components/Form/NewCaseButton";
 
 interface HeaderProps {
     title: string;

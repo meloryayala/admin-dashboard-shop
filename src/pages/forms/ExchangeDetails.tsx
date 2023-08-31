@@ -24,7 +24,7 @@ const ExchangeDetails: FC<HeaderProps> = ({title, pageIcon}) => {
 
     return (
         <>
-            <ReturnButton onClick={handleReturnPage} />
+            <ReturnButton onClick={handleReturnPage} page="Exchanges" />
 
             <form className="form-control">
                 <div className="card w-full bg-base-100 p-8 my-2">

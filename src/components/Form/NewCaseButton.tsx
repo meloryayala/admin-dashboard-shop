@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {PlusIcon} from "@heroicons/react/24/outline";
+import {PlusIcon} from "@heroicons/react/20/solid";
 
 interface NewCaseButtonProps {
     caseType: string;

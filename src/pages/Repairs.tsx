@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import TableTittle from "../components/lists/TableTittle";
 import lastRepairs from "../data/repairs";
 import RepairRow from "../components/lists/RowLists/RepairRow";
-import NewCaseButton from "../components/lists/NewCaseButton";
+import NewCaseButton from "../components/Form/NewCaseButton";
 
 interface HeaderProps {
     title: string;

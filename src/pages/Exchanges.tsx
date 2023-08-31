@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import TableTittle from "../components/lists/TableTittle";
 import lastExchanges from "../data/exchanges";
 import ExchangeRow from "../components/lists/RowLists/ExchangeRow";
-import NewCaseButton from "../components/lists/NewCaseButton";
+import NewCaseButton from "../components/Form/NewCaseButton";
 
 interface HeaderProps {
     title: string;
