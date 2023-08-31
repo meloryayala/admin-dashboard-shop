@@ -55,19 +55,19 @@ root.render(
                         <Route path="/exchanges" element={
                             <Exchanges
                                 title='Exchanges'
-                                pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-500"/>}
+                                pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-400"/>}
                             />}/>
 
                         <Route path="/repairs" element={
                             <Repairs
                                 title='Repairs'
-                                pageIcon={<RepairIcon className="h-9 w-9 text-pink-500"/>}
+                                pageIcon={<RepairIcon className="h-9 w-9 text-red-400"/>}
                             />}/>
 
                         <Route path="/demos" element={
                             <Demos
                                 title='Demos'
-                                pageIcon={<DemoIcon className="h-9 w-9 text-violet-500"/>}
+                                pageIcon={<DemoIcon className="h-9 w-9 text-violet-400"/>}
                             />}/>
 
                     </Routes>
