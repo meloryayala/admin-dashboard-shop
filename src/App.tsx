@@ -18,57 +18,74 @@ import ExchangeDetails from "./pages/forms/ExchangeDetails";
 import React from "react";
 
 const App = () => {
+    const orderColor = "amber-400"
+    const exchangeColor = "sky-400"
+    const repairColor = "red-400"
+    const demoColor = "violet-400"
+
+    const styleIconPage = `h-9 w-9 text-`
+    const stockIcon = <StockIcon className={styleIconPage}/>
+    const orderIcon = <OrderIcon className={styleIconPage + orderColor}/>
+    const exchangeIcon = <ExchangeIcon className={styleIconPage + exchangeColor}/>
+    const repairIcon = <RepairIcon className={styleIconPage + repairColor}/>
+    const demoIcon = <DemoIcon className={styleIconPage + demoColor}/>
+
+
   return(
       <BrowserRouter>
           <TemplateDefault>
               <Routes>
                   <Route path="/" element={
-                      <Dashboard
-                          title='Dashboard'
-                          pageIcon={<OrderIcon className="h-9 w-9 "/>}
+                      <Dashboard title='Dashboard'
+                         pageIcon={orderIcon}
                       />}/>
 
                   <Route path="/orders" element={
                       <Orders
                           title='Orders'
-                          pageIcon={<OrderIcon className="h-9 w-9 "/>}
+                          pageIcon={orderIcon}
                       />}/>
 
 
                   <Route path="/stock" element={
                       <Stock
                           title='Stock'
-                          pageIcon={<StockIcon className="h-9 w-9"/>}
+                          pageIcon={stockIcon}
                       />}/>
 
                   <Route path="/exchanges" element={
                       <Exchanges
                           title='Exchanges'
-                          pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-400"/>}
+                          pageIcon={exchangeIcon}
+                          exchangeColor={exchangeColor}
                       />}/>
 
                   <Route path="/repairs" element={
                       <Repairs
                           title='Repairs'
-                          pageIcon={<RepairIcon className="h-9 w-9 text-red-400"/>}
+                          pageIcon={repairIcon}
+                          repairColor={repairColor}
                       />}/>
 
                   <Route path="/demos" element={
                       <Demos
                           title='Demos'
-                          pageIcon={<DemoIcon className="h-9 w-9 text-violet-400"/>}
+                          pageIcon={demoIcon}
+                          demoColor={demoColor}
                       />}/>
 
                   <Route path="/orders/details/:orderNumber" element={
                       <OrderDetails
                           title='Order'
-                          pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
+                          pageIcon={orderIcon}
+                          orderColor={orderColor}
                       />}/>
 
                   <Route path="/exchanges/details/:orderNumber" element={
                       <ExchangeDetails
-                          title='Exchanges'
-                          pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-400"/>}
+                          title='Exchange'
+                          pageIcon={exchangeIcon}
+                          exchangeColor={exchangeColor}
                       />}/>
 
 

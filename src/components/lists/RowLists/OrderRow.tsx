@@ -7,7 +7,7 @@ interface OrderStatusProp {
     streetAdress: string;
     cityAdress: string;
     products: string[];
-    orderStatus: string
+    orderStatus: string;
     orderDate: string;
     sendDate: string;
     orderNumber: number;

@@ -8,12 +8,13 @@ import FormHeader from "../../components/Form/FormHeader";
 import SubmitButton from "../../components/Form/SubmitButton";
 import ReturnButton from "../../components/Form/ReturnButton";
 
-interface HeaderProps {
+interface OrderDetailsProps {
     title: string;
     pageIcon: JSX.Element;
+    orderColor: string;
 }
 
-const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
+const OrderDetails: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
 
@@ -74,7 +75,7 @@ const OrderDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                                         <SubmitButton buttonTitle="New repair" color="bg-pink-200" />
                                     </div>
                                 )
-                                : (<SubmitButton buttonTitle="Complete order" color="bg-accent" />)
+                                : (<SubmitButton buttonTitle="Complete order" color={`bg-${orderColor}`} />)
                         }
                     </div>
 

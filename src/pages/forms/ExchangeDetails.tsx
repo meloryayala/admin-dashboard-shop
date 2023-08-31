@@ -7,12 +7,13 @@ import SubmitButton from "../../components/Form/SubmitButton";
 import ReturnButton from "../../components/Form/ReturnButton";
 import lastExchanges from "../../data/exchanges";
 
-interface HeaderProps {
+interface ExchangeDetailsProps {
     title: string;
     pageIcon: JSX.Element;
+    exchangeColor: string;
 }
 
-const ExchangeDetails: FC<HeaderProps> = ({title, pageIcon}) => {
+const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
 
@@ -66,7 +67,7 @@ const ExchangeDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                     </div>
 
                     <div className="mt-10 mb-6">
-                        <SubmitButton buttonTitle="Complete exchange" color="bg-accent" />
+                        <SubmitButton buttonTitle="Complete exchange" color={`bg-${exchangeColor}`} />
                     </div>
 
                 </div>
