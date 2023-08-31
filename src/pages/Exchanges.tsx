@@ -3,24 +3,28 @@ import Header from "../components/Header";
 import TableTittle from "../components/lists/TableTittle";
 import lastExchanges from "../data/exchanges";
 import ExchangeRow from "../components/lists/RowLists/ExchangeRow";
+import NewCaseButton from "../components/lists/NewCaseButton";
 
 interface HeaderProps {
     title: string;
     pageIcon: JSX.Element;
 }
 
-const Exchanges:FC<HeaderProps> = ({title, pageIcon}) => {
-    return(
+const Exchanges: FC<HeaderProps> = ({title, pageIcon}) => {
+    return (
         <>
-        <Header title={title} pageIcon={pageIcon} />
+            <div className="flex justify-between">
+                <Header title={title} pageIcon={pageIcon}/>
+                <NewCaseButton caseType="New Exchange" caseColor="bg-sky-400" />
+            </div>
 
             <div className="container-center mt-16 mb-4 p-1">
                 <div className="grid grid-cols-9 justify-items-center">
                     <TableTittle spanTitle="Customer" isColSpan="col-span-2"/>
-                    <TableTittle spanTitle="Status" isColSpan="col-span-2" />
+                    <TableTittle spanTitle="Status" isColSpan="col-span-2"/>
                     <TableTittle spanTitle="Products" isColSpan="col-span-3"/>
-                    <TableTittle spanTitle="Open on" />
-                    <TableTittle spanTitle="Send date" />
+                    <TableTittle spanTitle="Open on"/>
+                    <TableTittle spanTitle="Send date"/>
                 </div>
             </div>
 

@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import TableTittle from "../components/lists/TableTittle";
 import lastRepairs from "../data/repairs";
 import RepairRow from "../components/lists/RowLists/RepairRow";
+import NewCaseButton from "../components/lists/NewCaseButton";
 
 interface HeaderProps {
     title: string;
@@ -12,7 +13,10 @@ interface HeaderProps {
 const Repairs: FC<HeaderProps> = ({title, pageIcon}) => {
     return (
         <>
-            <Header title={title} pageIcon={pageIcon}/>
+            <div className="flex justify-between">
+                <Header title={title} pageIcon={pageIcon}/>
+                <NewCaseButton caseType="New repair" caseColor="bg-red-400" />
+            </div>
 
             <div className="container-center mt-16 mb-4 p-1">
                 <div className="grid grid-cols-5 justify-items-center">

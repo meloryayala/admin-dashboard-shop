@@ -24,8 +24,8 @@ const DemoRow:FC<DemoStatusProp> = ({clientName, streetAdress, cityAdress,produc
                         <p className="text-xs">{cityAdress}, {streetAdress}</p>
                     </div>
                     <DemoStatus demoStatus={demoStatus} />
-                    <div>{openDemo}</div>
                     <div>{productDemo}</div>
+                    <div>{openDemo}</div>
                     <div>{sendDate === '' ? '-' : sendDate}</div>
                 </div>
             </Link>
