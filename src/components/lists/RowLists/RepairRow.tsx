@@ -1,6 +1,7 @@
 import {FC} from "react";
 import {Link} from "react-router-dom";
 import RepairStatus from "../StatusLists/RepairStatus";
+import RepairTypeBadge from "../StatusLists/RepairTypeBadge";
 
 interface RepairStatusProp {
     clientName: string;
@@ -24,9 +25,9 @@ const RepairRow:FC<RepairStatusProp> = ({clientName, streetAdress, cityAdress,pr
                         <p className="text-xs">{cityAdress}, {streetAdress}</p>
                     </div>
                     <RepairStatus repairStatus={repairStatus} />
-                    <div>{openRepair}</div>
                     <div>{productToRepair}</div>
-                    <div>{repairType === '' ? '-' : repairType }</div>
+                    <div>{openRepair}</div>
+                    <div><RepairTypeBadge repairType={repairType} /> </div>
                 </div>
             </Link>
         </li>

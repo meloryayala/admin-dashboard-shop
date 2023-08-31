@@ -18,8 +18,8 @@ const Repairs: FC<HeaderProps> = ({title, pageIcon}) => {
                 <div className="grid grid-cols-5 justify-items-center">
                     <TableTittle spanTitle="Customer" />
                     <TableTittle spanTitle="Status" />
-                    <TableTittle spanTitle="Open on" />
                     <TableTittle spanTitle="Product"/>
+                    <TableTittle spanTitle="Open on" />
                     <TableTittle spanTitle="Type" />
                 </div>
             </div>
