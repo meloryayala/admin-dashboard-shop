@@ -66,7 +66,7 @@ root.render(
 
                         <Route path="/demos" element={
                             <Demos
-                                title='Orders'
+                                title='Demos'
                                 pageIcon={<DemoIcon className="h-9 w-9 text-violet-500"/>}
                             />}/>
 
