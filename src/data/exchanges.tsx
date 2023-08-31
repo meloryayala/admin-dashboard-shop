@@ -33,7 +33,7 @@ const lastExchanges = [
             completedExchange: '',
         },
         clientInfo: {
-            pronoun: 'Madam',
+            pronoun: 'Sir',
             name: 'Paul Müller',
             streetAdress: 'Helvetiastrasse',
             numberAdress: 23,
@@ -54,7 +54,7 @@ const lastExchanges = [
             completedExchange: '20/02/2023',
         },
         clientInfo: {
-            pronoun: 'Sir',
+            pronoun: 'Madam',
             name: 'Maria Fall',
             streetAdress: 'Dornacherstrasse',
             numberAdress: 6,

@@ -7,8 +7,8 @@ interface ExchangeStatusProp {
     streetAdress: string;
     cityAdress: string;
     productClientHas: string;
-    productClientNeed: string,
-    exchangeStatus: string,
+    productClientNeed: string;
+    exchangeStatus: string;
     sendDate: string;
     orderNumber: number;
 }
