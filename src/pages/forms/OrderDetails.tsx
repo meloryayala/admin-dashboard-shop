@@ -1,12 +1,12 @@
 import {FC, JSX} from "react";
 import {useNavigate, useParams} from "react-router-dom";
-import TextInput from "../components/Form/TextInput";
-import {lastOrders} from "../data/orders";
-import SelectInput from "../components/Form/SelectInput";
-import ProductInput from "../components/Form/ProductInput";
-import FormHeader from "../components/Form/FormHeader";
-import SubmitButton from "../components/Form/SubmitButton";
-import ReturnButton from "../components/Form/ReturnButton";
+import TextInput from "../../components/Form/TextInput";
+import {lastOrders} from "../../data/orders";
+import SelectInput from "../../components/Form/SelectInput";
+import ProductInput from "../../components/Form/ProductInput";
+import FormHeader from "../../components/Form/FormHeader";
+import SubmitButton from "../../components/Form/SubmitButton";
+import ReturnButton from "../../components/Form/ReturnButton";
 
 interface HeaderProps {
     title: string;

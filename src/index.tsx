@@ -17,7 +17,8 @@ import {
     TagIcon as DemoIcon,
     WrenchScrewdriverIcon as RepairIcon,
 } from '@heroicons/react/24/outline'
-import OrderDetails from "./pages/OrderDetails";
+import OrderDetails from "./pages/forms/OrderDetails";
+import ExchangeDetails from "./pages/forms/ExchangeDetails";
 
 
 const root = ReactDOM.createRoot(
@@ -40,11 +41,6 @@ root.render(
                                 pageIcon={<OrderIcon className="h-9 w-9 "/>}
                             />}/>
 
-                        <Route path="/orders/details/:orderNumber" element={
-                            <OrderDetails
-                                title='Order'
-                                pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
-                            />}/>
 
                         <Route path="/stock" element={
                             <Stock
@@ -69,6 +65,19 @@ root.render(
                                 title='Demos'
                                 pageIcon={<DemoIcon className="h-9 w-9 text-violet-400"/>}
                             />}/>
+
+                        <Route path="/orders/details/:orderNumber" element={
+                            <OrderDetails
+                                title='Order'
+                                pageIcon={<OrderIcon className="h-9 w-9 text-accent"/>}
+                            />}/>
+
+                        <Route path="/exchanges/details/:orderNumber" element={
+                            <ExchangeDetails
+                                title='Exchanges'
+                                pageIcon={<ExchangeIcon className="h-9 w-9 text-sky-400"/>}
+                            />}/>
+
 
                     </Routes>
                 </App>
