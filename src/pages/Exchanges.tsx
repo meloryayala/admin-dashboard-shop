@@ -15,10 +15,11 @@ const Exchanges:FC<HeaderProps> = ({title, pageIcon}) => {
         <Header title={title} pageIcon={pageIcon} />
 
             <div className="container-center mt-16 mb-4 p-1">
-                <div className="grid grid-cols-7 justify-items-center">
+                <div className="grid grid-cols-9 justify-items-center">
                     <TableTittle spanTitle="Customer" isColSpan="col-span-2"/>
                     <TableTittle spanTitle="Status" isColSpan="col-span-2" />
-                    <TableTittle spanTitle="Exchange" isColSpan="col-span-2" />
+                    <TableTittle spanTitle="Products" isColSpan="col-span-3"/>
+                    <TableTittle spanTitle="Open on" />
                     <TableTittle spanTitle="Send date" />
                 </div>
             </div>
@@ -34,6 +35,7 @@ const Exchanges:FC<HeaderProps> = ({title, pageIcon}) => {
                                 productClientHas={lastExchange.productClientHas}
                                 productClientNeed={lastExchange.productClientNeed}
                                 exchangeStatus={lastExchange.exchangeStatus}
+                                openExchange={lastExchange.dateHistoric.openExchange}
                                 sendDate={lastExchange.dateHistoric.sendArticle}
                                 orderNumber={lastExchange.orderNumber}
                             />
