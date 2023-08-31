@@ -5,12 +5,12 @@ import Header from "../components/Header";
 import TableTittle from "../components/lists/TableTittle";
 import SearchBar from "../components/Form/SearchBar";
 
-interface HeaderProps {
+interface OrderProps {
     title?: string;
     pageIcon?: JSX.Element;
 }
 
-const Orders:FC<HeaderProps> = ({title, pageIcon}) => {
+const Orders:FC<OrderProps> = ({title, pageIcon}) => {
     return (
         <>
             <Header title={title} pageIcon={pageIcon} />

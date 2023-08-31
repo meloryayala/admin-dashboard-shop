@@ -5,17 +5,18 @@ import lastExchanges from "../data/exchanges";
 import ExchangeRow from "../components/lists/RowLists/ExchangeRow";
 import NewCaseButton from "../components/Form/NewCaseButton";
 
-interface HeaderProps {
+interface ExchangeProps {
     title: string;
     pageIcon: JSX.Element;
+    exchangeColor: string;
 }
 
-const Exchanges: FC<HeaderProps> = ({title, pageIcon}) => {
+const Exchanges: FC<ExchangeProps> = ({title, pageIcon, exchangeColor}) => {
     return (
         <>
             <div className="flex justify-between">
                 <Header title={title} pageIcon={pageIcon}/>
-                <NewCaseButton caseType="New Exchange" caseColor="bg-sky-400" />
+                <NewCaseButton caseType="New Exchange" caseColor={`bg-${exchangeColor}`} />
             </div>
 
             <div className="container-center mt-16 mb-4 p-1">

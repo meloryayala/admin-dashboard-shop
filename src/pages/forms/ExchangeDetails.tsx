@@ -7,12 +7,13 @@ import SubmitButton from "../../components/Form/SubmitButton";
 import ReturnButton from "../../components/Form/ReturnButton";
 import lastExchanges from "../../data/exchanges";
 
-interface HeaderProps {
+interface ExchangeDetailsProps {
     title: string;
     pageIcon: JSX.Element;
+    exchangeColor: string;
 }
 
-const ExchangeDetails: FC<HeaderProps> = ({title, pageIcon}) => {
+const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
 
@@ -27,7 +28,7 @@ const ExchangeDetails: FC<HeaderProps> = ({title, pageIcon}) => {
             <ReturnButton onClick={handleReturnPage} page="Exchanges" />
 
             <form className="form-control">
-                <div className="card w-full bg-base-100 p-8 my-2">
+                <div className={`card card-bordered border-${exchangeColor} border-2 w-full bg-base-100 p-8 my-2`}>
                     <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
 
                     <div className="mt-10 mb-6 ">
@@ -66,7 +67,7 @@ const ExchangeDetails: FC<HeaderProps> = ({title, pageIcon}) => {
                     </div>
 
                     <div className="mt-10 mb-6">
-                        <SubmitButton buttonTitle="Complete exchange" color="bg-accent" />
+                        <SubmitButton buttonTitle="Complete exchange" color={`bg-${exchangeColor}`} />
                     </div>
 
                 </div>

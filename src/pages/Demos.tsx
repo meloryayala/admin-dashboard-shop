@@ -5,17 +5,18 @@ import lastDemos from "../data/demos";
 import DemoRow from "../components/lists/RowLists/DemoRow";
 import NewCaseButton from "../components/Form/NewCaseButton";
 
-interface HeaderProps {
+interface DemoProps {
     title: string;
     pageIcon: JSX.Element;
+    demoColor: string;
 }
 
-const Demos: FC<HeaderProps> = ({title, pageIcon}) => {
+const Demos: FC<DemoProps> = ({title, pageIcon, demoColor}) => {
     return (
         <>
             <div className="flex justify-between">
                 <Header title={title} pageIcon={pageIcon}/>
-                <NewCaseButton caseType="New demo" caseColor="bg-violet-400" />
+                <NewCaseButton caseType="New demo" caseColor={`bg-${demoColor}`} />
             </div>
 
             <div className="container-center mt-16 mb-4 p-1">
