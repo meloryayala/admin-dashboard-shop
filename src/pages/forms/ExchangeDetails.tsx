@@ -28,7 +28,7 @@ const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeCol
             <ReturnButton onClick={handleReturnPage} page="Exchanges" />
 
             <form className="form-control">
-                <div className="card w-full bg-base-100 p-8 my-2">
+                <div className={`card card-bordered border-${exchangeColor} border-2 w-full bg-base-100 p-8 my-2`}>
                     <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
 
                     <div className="mt-10 mb-6 ">
