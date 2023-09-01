@@ -14,7 +14,7 @@ interface OrderDetailsProps {
     orderColor: string;
 }
 
-const OrderDetails: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
+const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
 
@@ -32,10 +32,7 @@ const OrderDetails: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
                 <div className="card w-full bg-base-100 p-8 my-2">
                     <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
 
-                    <div className="mt-10 mb-6 ">
-                        <h3 className="text-sm font-medium text-base-content mb-4">
-                            ORDER INFORMATION
-                        </h3>
+                    <div className="m-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Order number" value={order?.orderNumber} disabled/>
                             <TextInput label="Order date" value={order?.orderDate} disabled/>
@@ -44,10 +41,7 @@ const OrderDetails: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
                         </div>
                     </div>
 
-                    <div className="mt-10 mb-6">
-                        <h3 className="text-sm font-medium text-base-content mb-4">
-                            CLIENT ADDRESS
-                        </h3>
+                    <div className="m-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Street" value={order?.clientInfo.streetAdress} disabled/>
                             <TextInput label="House number" value={order?.clientInfo.numberAdress} disabled/>
@@ -56,17 +50,14 @@ const OrderDetails: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
                         </div>
                     </div>
 
-                    <div className="mt-10 mb-6">
-                        <h3 className="text-sm font-medium text-base-content mb-4">
-                            PRODUCTS
-                        </h3>
+                    <div className="m-6">
                         <div className="grid grid-cols-1 gap-4 my-2">
                             <ProductInput label="Products" value={order?.products}/>
 
                         </div>
                     </div>
 
-                    <div className="mt-10 mb-6">
+                    <div className="m-6">
                         {
                             order?.orderStatus === 'Completed'
                                 ? (
@@ -86,4 +77,4 @@ const OrderDetails: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
     )
 }
 
-export default OrderDetails;
+export default OrderForm;

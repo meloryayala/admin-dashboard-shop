@@ -9,7 +9,7 @@ const ProductInput: FC<ProductInputProps> = ({label, value}) => {
     return (
         <div>
             <label className="label">
-            <span className="label-text font-medium text-base-content/60">
+            <span className="label-text font-medium text-base-content">
                 {label}
             </span>
             </label>

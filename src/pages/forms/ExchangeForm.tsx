@@ -13,7 +13,7 @@ interface ExchangeDetailsProps {
     exchangeColor: string;
 }
 
-const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}) => {
+const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
 
@@ -28,13 +28,10 @@ const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeCol
             <ReturnButton onClick={handleReturnPage} page="Exchanges" />
 
             <form className="form-control">
-                <div className={`card card-bordered border-${exchangeColor} border-2 w-full bg-base-100 p-8 my-2`}>
+                <div className="card w-full bg-base-100 p-8 my-2">
                     <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
 
-                    <div className="mt-10 mb-6 ">
-                        <h3 className="text-sm font-medium text-base-content mb-4">
-                            ORDER INFORMATION
-                        </h3>
+                    <div className="m-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Order number" value={exchange?.orderNumber} disabled/>
                             <TextInput label="Order date" value={exchange?.orderDate} disabled/>
@@ -43,10 +40,7 @@ const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeCol
                         </div>
                     </div>
 
-                    <div className="mt-10 mb-6">
-                        <h3 className="text-sm font-medium text-base-content mb-4">
-                            CLIENT ADDRESS
-                        </h3>
+                    <div className="m-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Street" value={exchange?.clientInfo.streetAdress} disabled/>
                             <TextInput label="House number" value={exchange?.clientInfo.numberAdress} disabled/>
@@ -55,10 +49,7 @@ const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeCol
                         </div>
                     </div>
 
-                    <div className="mt-10 mb-6">
-                        <h3 className="text-sm font-medium text-base-content mb-4">
-                            PRODUCT EXCHANGE
-                        </h3>
+                    <div className="m-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Client has" value={exchange?.productClientHas} disabled/>
                             <TextInput label="Client needs" value={exchange?.productClientNeed} disabled/>
@@ -66,7 +57,7 @@ const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeCol
                         </div>
                     </div>
 
-                    <div className="mt-10 mb-6">
+                    <div className="m-5">
                         <SubmitButton buttonTitle="Complete exchange" color={`bg-${exchangeColor}`} />
                     </div>
 
@@ -77,4 +68,4 @@ const ExchangeDetails: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeCol
     )
 }
 
-export default ExchangeDetails;
+export default ExchangeForm;

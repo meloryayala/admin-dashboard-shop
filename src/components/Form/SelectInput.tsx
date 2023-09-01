@@ -12,8 +12,8 @@ const TextInput: FC<TextInputProps> = ({label, disabled, placeholder, value}) =>
     return (
         <>
             <div>
-                <label className="label">
-            <span className="label-text font-medium text-base-content/60">
+                <label className="label mb-0">
+            <span className="label-text font-medium text-base-content">
                 {label}
             </span>
                 </label>

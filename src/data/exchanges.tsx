@@ -4,7 +4,7 @@ const lastExchanges = [
         orderDate: '20/01/2023',
         productClientHas: 'Pro suit XS',
         productClientNeed: 'Pro suit XXS',
-        clientComment: 'Comment made by the client regarding the ordered items.',
+        clientComment: 'Comment made regarding the exchange.',
         exchangeStatus: 'Open exchange',
         dateHistoric: {
             openExchange: '20/02/2023',

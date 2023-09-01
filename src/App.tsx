@@ -13,8 +13,8 @@ import Stock from "./pages/Stock";
 import Exchanges from "./pages/Exchanges";
 import Repairs from "./pages/Repairs";
 import Demos from "./pages/Demos";
-import OrderDetails from "./pages/forms/OrderDetails";
-import ExchangeDetails from "./pages/forms/ExchangeDetails";
+import OrderForm from "./pages/forms/OrderForm";
+import ExchangeForm from "./pages/forms/ExchangeForm";
 import React from "react";
 
 const App = () => {
@@ -75,14 +75,14 @@ const App = () => {
                       />}/>
 
                   <Route path="/orders/details/:orderNumber" element={
-                      <OrderDetails
+                      <OrderForm
                           title='Order'
                           pageIcon={orderIcon}
                           orderColor={orderColor}
                       />}/>
 
                   <Route path="/exchanges/details/:orderNumber" element={
-                      <ExchangeDetails
+                      <ExchangeForm
                           title='Exchange'
                           pageIcon={exchangeIcon}
                           exchangeColor={exchangeColor}
