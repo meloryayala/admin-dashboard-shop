@@ -18,7 +18,7 @@ const ExchangeRow:FC<ExchangeStatusProp> = ({clientName, streetAdress, cityAdres
 
     return(
         <li>
-            <Link to={`/exchanges/details/${orderNumber}`}>
+            <Link to={{ pathname:`/exchanges/details/${orderNumber}`, search:`?status=${exchangeStatus}`}}>
                 <div className={`alert grid grid-cols-9 bg-base-100 justify-items-center content-center my-2`}>
                     <div className="col-span-2 justify-self-start pl-3">
                         <h3 className="text-base font-medium">{clientName}</h3>

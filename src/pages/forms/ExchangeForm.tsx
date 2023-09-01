@@ -1,5 +1,5 @@
 import {FC, JSX} from "react";
-import {useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams, useSearchParams} from "react-router-dom";
 import TextInput from "../../components/Form/TextInput";
 import SelectInput from "../../components/Form/SelectInput";
 import FormHeader from "../../components/Form/FormHeader";
@@ -16,6 +16,8 @@ interface ExchangeDetailsProps {
 const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
+    const [searchParams, setSearchParams] = useSearchParams()
+    const currentStatus = searchParams.get('status')
 
     const handleReturnPage = ()  => {
         navigate('/exchanges');
@@ -29,7 +31,7 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}
 
             <form className="form-control">
                 <div className="card w-full bg-base-100 p-8 my-2">
-                    <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
+                    <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} currentStatus={currentStatus} />
 
                     <div className="m-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
@@ -56,6 +58,7 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}
 
                         </div>
                     </div>
+
 
                     <div className="m-5">
                         <SubmitButton buttonTitle="Complete exchange" color={`bg-${exchangeColor}`} />

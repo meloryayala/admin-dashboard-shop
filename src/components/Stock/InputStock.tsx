@@ -1,5 +1,5 @@
 import {FC, useState} from "react";
-import {Products} from "../../utils/productsEnum";
+import {Products} from "../../constants/productsEnum";
 
 interface ProductInfo {
     productId?: Products;

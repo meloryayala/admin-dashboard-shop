@@ -1,5 +1,5 @@
 import InputStock from "../../components/Stock/InputStock";
-import {Products} from "../../utils/productsEnum";
+import {Products} from "../../constants/productsEnum";
 import {getProduct} from "../../utils/fnGetProduct";
 import TableTittle from "../lists/TableTittle";
 import StockTitle from "./StockTitle";
