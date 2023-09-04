@@ -8,6 +8,7 @@ import ReturnButton from "../../components/Form/ReturnButton";
 import lastExchanges from "../../data/exchanges";
 import TrackItemLink from "../../components/Form/TrackItemLink";
 import TextArea from "../../components/Form/TextArea";
+import ToggleInput from "../../components/Form/ToggleInput";
 
 
 interface ExchangeDetailsProps {
@@ -21,19 +22,11 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
     const [searchParams, setSearchParams] = useSearchParams()
     const currentStatus = searchParams.get('status')
 
-
     const handleReturnPage = () => {
         navigate('/exchanges');
     }
 
     const exchange = lastExchanges.find(lastExchange => lastExchange.orderNumber.toString() === orderNumber);
-
-
-
-
-
-
-
 
     if (currentStatus === 'open') {
         console.log('Is open')
@@ -83,10 +76,26 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
                         <TextArea label="Comment about exchange" placeholder="e.g. Client is not sure about the size." value={exchange?.comment} disabled />
                     </div>
 
+                    <div className="my-6">
+                        <ToggleInput
+                            label="Remove from Stock" action="The product clients needs will be removed from stock"
+                            toggleStyle="toggle toggle-info"
+                            isChecked={true}
+                        />
+                    </div>
 
                     <div className="my-6">
-                        <SubmitButton buttonTitle="Complete exchange" color="bg-sky-400"/>
+                        <ToggleInput
+                            label="Get etiquette" action="The etiquette will be open after submit"
+                            toggleStyle="toggle toggle-info"
+                            isChecked={true}
+                        />
                     </div>
+
+                    <div className="my-6">
+                        <SubmitButton buttonTitle="Complete exchange" color="bg-sky-400 hover:bg-sky-300"/>
+                    </div>
+
 
 
                 </div>
