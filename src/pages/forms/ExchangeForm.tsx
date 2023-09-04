@@ -7,6 +7,7 @@ import SubmitButton from "../../components/Form/SubmitButton";
 import ReturnButton from "../../components/Form/ReturnButton";
 import lastExchanges from "../../data/exchanges";
 import TrackItemLink from "../../components/Form/TrackItemLink";
+import TextArea from "../../components/Form/TextArea";
 
 
 interface ExchangeDetailsProps {
@@ -79,6 +80,7 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
                     </div>
 
                     <div className="my-6">
+                        <TextArea label="Comment about exchange" placeholder="e.g. Client is not sure about the size." value={exchange?.comment} disabled />
                     </div>
 
 

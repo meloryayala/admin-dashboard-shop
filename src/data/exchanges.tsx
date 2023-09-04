@@ -4,7 +4,7 @@ const lastExchanges = [
         orderDate: '20/01/2023',
         productClientHas: 'Pro suit XS',
         productClientNeed: 'Pro suit XXS',
-        clientComment: 'Comment made regarding the exchange.',
+        comment: 'Comment made regarding the exchange.',
         exchangeStatus: 'open',
         dateHistoric: {
             openExchange: '20/02/2023',
@@ -25,7 +25,7 @@ const lastExchanges = [
         orderDate: '15/02/2023',
         productClientHas: 'Pro suit XL',
         productClientNeed: 'Pro suit L',
-        clientComment: '',
+        comment: '',
         exchangeStatus: 'send',
         dateHistoric: {
             openExchange: '15/04/2023',
@@ -47,6 +47,7 @@ const lastExchanges = [
         orderDate: '20/01/2023',
         productClientHas: 'Home suit M',
         productClientNeed: 'Home suit S',
+        comment: '',
         exchangeStatus: 'completed',
         dateHistoric: {
             openExchange: '10/01/2023',
