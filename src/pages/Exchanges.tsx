@@ -8,15 +8,14 @@ import NewCaseButton from "../components/Form/NewCaseButton";
 interface ExchangeProps {
     title: string;
     pageIcon: JSX.Element;
-    exchangeColor: string;
 }
 
-const Exchanges: FC<ExchangeProps> = ({title, pageIcon, exchangeColor}) => {
+const Exchanges: FC<ExchangeProps> = ({title, pageIcon}) => {
     return (
         <>
             <div className="flex justify-between">
                 <Header title={title} pageIcon={pageIcon}/>
-                <NewCaseButton caseType="New Exchange" caseColor={`bg-${exchangeColor}`} />
+                <NewCaseButton caseType="New Exchange" caseColor="bg-sky-400" />
             </div>
 
             <div className="container-center mt-16 mb-4 p-1">

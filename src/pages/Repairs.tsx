@@ -5,18 +5,18 @@ import lastRepairs from "../data/repairs";
 import RepairRow from "../components/lists/RowLists/RepairRow";
 import NewCaseButton from "../components/Form/NewCaseButton";
 
+
 interface RepairProps {
     title: string;
     pageIcon: JSX.Element;
-    repairColor: string
 }
 
-const Repairs: FC<RepairProps> = ({title, pageIcon, repairColor}) => {
+const Repairs: FC<RepairProps> = ({title, pageIcon}) => {
     return (
         <>
             <div className="flex justify-between">
                 <Header title={title} pageIcon={pageIcon}/>
-                <NewCaseButton caseType="New repair" caseColor={`bg-${repairColor}`} />
+                <NewCaseButton caseType="New repair" caseColor="bg-red-400" />
             </div>
 
             <div className="container-center mt-16 mb-4 p-1">

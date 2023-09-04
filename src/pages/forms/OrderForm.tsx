@@ -11,10 +11,9 @@ import ReturnButton from "../../components/Form/ReturnButton";
 interface OrderDetailsProps {
     title: string;
     pageIcon: JSX.Element;
-    orderColor: string;
 }
 
-const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
+const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
 
@@ -66,7 +65,7 @@ const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon, orderColor}) => {
                                         <SubmitButton buttonTitle="New repair" color="bg-pink-200" />
                                     </div>
                                 )
-                                : (<SubmitButton buttonTitle="Complete order" color={`bg-${orderColor}`} />)
+                                : (<SubmitButton buttonTitle="Complete order" color="bg-amber-400" />)
                         }
                     </div>
 

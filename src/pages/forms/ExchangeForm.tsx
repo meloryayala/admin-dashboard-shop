@@ -10,10 +10,9 @@ import lastExchanges from "../../data/exchanges";
 interface ExchangeDetailsProps {
     title: string;
     pageIcon: JSX.Element;
-    exchangeColor: string;
 }
 
-const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}) => {
+const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
     const [searchParams, setSearchParams] = useSearchParams()
@@ -61,7 +60,7 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon, exchangeColor}
 
 
                     <div className="m-5">
-                        <SubmitButton buttonTitle="Complete exchange" color={`bg-${exchangeColor}`} />
+                        <SubmitButton buttonTitle="Complete exchange" color="bg-sky-400" />
                     </div>
 
                 </div>

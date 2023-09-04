@@ -8,15 +8,14 @@ import NewCaseButton from "../components/Form/NewCaseButton";
 interface DemoProps {
     title: string;
     pageIcon: JSX.Element;
-    demoColor: string;
 }
 
-const Demos: FC<DemoProps> = ({title, pageIcon, demoColor}) => {
+const Demos: FC<DemoProps> = ({title, pageIcon}) => {
     return (
         <>
             <div className="flex justify-between">
                 <Header title={title} pageIcon={pageIcon}/>
-                <NewCaseButton caseType="New demo" caseColor={`bg-${demoColor}`} />
+                <NewCaseButton caseType="New demo" caseColor="bg-violet-400" />
             </div>
 
             <div className="container-center mt-16 mb-4 p-1">

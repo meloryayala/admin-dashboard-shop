@@ -17,18 +17,14 @@ import OrderForm from "./pages/forms/OrderForm";
 import ExchangeForm from "./pages/forms/ExchangeForm";
 import React from "react";
 
-const App = () => {
-    const orderColor = "amber-400"
-    const exchangeColor = "sky-400"
-    const repairColor = "red-400"
-    const demoColor = "violet-400"
 
-    const styleIconPage = `h-9 w-9 text-`
-    const stockIcon = <StockIcon className={styleIconPage}/>
-    const orderIcon = <OrderIcon className={styleIconPage + orderColor}/>
-    const exchangeIcon = <ExchangeIcon className={styleIconPage + exchangeColor}/>
-    const repairIcon = <RepairIcon className={styleIconPage + repairColor}/>
-    const demoIcon = <DemoIcon className={styleIconPage + demoColor}/>
+const App = () => {
+
+    const stockIcon = <StockIcon className={`h-9 w-9`} />
+    const orderIcon = <OrderIcon className="h-9 w-9 text-amber-400" />
+    const exchangeIcon = <ExchangeIcon className="h-9 w-9 text-sky-400" />
+    const repairIcon = <RepairIcon className="h-9 w-9 text-red-400" />
+    const demoIcon = <DemoIcon className="h-9 w-9 text-violet-400" />
 
 
   return(
@@ -57,35 +53,30 @@ const App = () => {
                       <Exchanges
                           title='Exchanges'
                           pageIcon={exchangeIcon}
-                          exchangeColor={exchangeColor}
                       />}/>
 
                   <Route path="/repairs" element={
                       <Repairs
                           title='Repairs'
                           pageIcon={repairIcon}
-                          repairColor={repairColor}
                       />}/>
 
                   <Route path="/demos" element={
                       <Demos
                           title='Demos'
                           pageIcon={demoIcon}
-                          demoColor={demoColor}
                       />}/>
 
                   <Route path="/orders/details/:orderNumber" element={
                       <OrderForm
                           title='Order'
                           pageIcon={orderIcon}
-                          orderColor={orderColor}
                       />}/>
 
                   <Route path="/exchanges/details/:orderNumber" element={
                       <ExchangeForm
                           title='Exchange'
                           pageIcon={exchangeIcon}
-                          exchangeColor={exchangeColor}
                       />}/>
 
 
