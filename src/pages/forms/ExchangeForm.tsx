@@ -6,6 +6,8 @@ import FormHeader from "../../components/Form/FormHeader";
 import SubmitButton from "../../components/Form/SubmitButton";
 import ReturnButton from "../../components/Form/ReturnButton";
 import lastExchanges from "../../data/exchanges";
+import TrackItemLink from "../../components/Form/TrackItemLink";
+
 
 interface ExchangeDetailsProps {
     title: string;
@@ -18,21 +20,39 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
     const [searchParams, setSearchParams] = useSearchParams()
     const currentStatus = searchParams.get('status')
 
-    const handleReturnPage = ()  => {
+
+    const handleReturnPage = () => {
         navigate('/exchanges');
     }
 
     const exchange = lastExchanges.find(lastExchange => lastExchange.orderNumber.toString() === orderNumber);
 
+
+
+
+
+
+
+
+    if (currentStatus === 'open') {
+        console.log('Is open')
+    } else if (currentStatus === 'send') {
+        console.log('Is send')
+    } else if (currentStatus === 'completed') {
+        console.log('Is completed')
+    }
+
+
     return (
         <>
-            <ReturnButton onClick={handleReturnPage} page="Exchanges" />
+            <ReturnButton onClick={handleReturnPage} page="Exchanges"/>
 
             <form className="form-control">
                 <div className="card w-full bg-base-100 p-8 my-2">
-                    <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} currentStatus={currentStatus} />
+                    <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon}
+                                currentStatus={currentStatus}/>
 
-                    <div className="m-6">
+                    <div className="my-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Order number" value={exchange?.orderNumber} disabled/>
                             <TextInput label="Order date" value={exchange?.orderDate} disabled/>
@@ -41,7 +61,7 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
                         </div>
                     </div>
 
-                    <div className="m-6">
+                    <div className="my-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Street" value={exchange?.clientInfo.streetAdress} disabled/>
                             <TextInput label="House number" value={exchange?.clientInfo.numberAdress} disabled/>
@@ -50,18 +70,22 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
                         </div>
                     </div>
 
-                    <div className="m-6">
+                    <div className="my-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Client has" value={exchange?.productClientHas} disabled/>
                             <TextInput label="Client needs" value={exchange?.productClientNeed} disabled/>
-
                         </div>
+                        <TrackItemLink />
+                    </div>
+
+                    <div className="my-6">
                     </div>
 
 
-                    <div className="m-5">
-                        <SubmitButton buttonTitle="Complete exchange" color="bg-sky-400" />
+                    <div className="my-6">
+                        <SubmitButton buttonTitle="Complete exchange" color="bg-sky-400"/>
                     </div>
+
 
                 </div>
             </form>
