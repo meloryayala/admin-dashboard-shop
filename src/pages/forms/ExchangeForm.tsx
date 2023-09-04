@@ -28,14 +28,6 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
 
     const exchange = lastExchanges.find(lastExchange => lastExchange.orderNumber.toString() === orderNumber);
 
-    if (currentStatus === 'open') {
-        console.log('Is open')
-    } else if (currentStatus === 'send') {
-        console.log('Is send')
-    } else if (currentStatus === 'completed') {
-        console.log('Is completed')
-    }
-
 
     return (
         <>
@@ -69,32 +61,60 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
                             <TextInput label="Client has" value={exchange?.productClientHas} disabled/>
                             <TextInput label="Client needs" value={exchange?.productClientNeed} disabled/>
                         </div>
-                        <TrackItemLink />
+                        <TrackItemLink/>
                     </div>
 
                     <div className="my-6">
-                        <TextArea label="Comment about exchange" placeholder="e.g. Client is not sure about the size." value={exchange?.comment} disabled />
+                        <TextArea label="Comment about exchange" placeholder="e.g. Client is not sure about the size."
+                                  value={exchange?.comment} disabled/>
                     </div>
 
-                    <div className="my-6">
-                        <ToggleInput
-                            label="Remove from Stock" action="The product clients needs will be removed from stock"
-                            toggleStyle="toggle toggle-info"
-                            isChecked={true}
-                        />
-                    </div>
+                    {
+                        currentStatus === 'open'
+                            ? (
+                                <>
+                                    <div className="my-6">
+                                        <ToggleInput
+                                            label="Remove from Stock"
+                                            action="The product clients needs will be removed from stock"
+                                            toggleStyle="toggle toggle-info"
+                                            isChecked={true}
+                                        />
+                                    </div>
 
-                    <div className="my-6">
-                        <ToggleInput
-                            label="Get etiquette" action="The etiquette will be open after submit"
-                            toggleStyle="toggle toggle-info"
-                            isChecked={true}
-                        />
-                    </div>
+                                    <div className="my-6">
+                                        <ToggleInput
+                                            label="Get etiquette" action="The etiquette will be open after submit"
+                                            toggleStyle="toggle toggle-info"
+                                            isChecked={true}
+                                        />
+                                    </div>
 
-                    <div className="my-6">
-                        <SubmitButton buttonTitle="Complete exchange" color="bg-sky-400 hover:bg-sky-300"/>
-                    </div>
+                                    <div className="my-6">
+                                        <SubmitButton buttonTitle="Send article" color="bg-sky-400 hover:bg-sky-300"/>
+                                    </div>
+                                </>
+                            ) : null
+                    }
+                    {
+                        currentStatus === 'send'
+                        ? (
+                            <>
+                                <div className="my-6">
+                                    <ToggleInput
+                                        label="Add to stock"
+                                        action="The product received from the client will return to the stock"
+                                        toggleStyle="toggle toggle-info"
+                                        isChecked={true}
+                                    />
+                                </div>
+
+                                <div className="my-6">
+                                    <SubmitButton buttonTitle="Complete exchange" color="bg-sky-400 hover:bg-sky-300"/>
+                                </div>
+                            </>
+                            ): null
+                    }
 
 
 

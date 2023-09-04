@@ -48,7 +48,7 @@ const lastExchanges = [
         productClientHas: 'Home suit M',
         productClientNeed: 'Home suit S',
         comment: '',
-        exchangeStatus: 'completed',
+        exchangeStatus: 'complete',
         dateHistoric: {
             openExchange: '10/01/2023',
             sendArticle: '15/02/2023',

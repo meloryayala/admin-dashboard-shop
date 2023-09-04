@@ -8,7 +8,7 @@ interface NewCaseButtonProps {
 
 const NewCaseButton: FC<NewCaseButtonProps> = ({caseType, caseColor}) => {
   return(
-      <button className={`btn ${caseColor}`}>
+      <button className={`btn ${caseColor}`} >
           <PlusIcon className="h-7 w-7" />
           {caseType}
       </button>

@@ -10,7 +10,9 @@ interface ExchangeProps {
     pageIcon: JSX.Element;
 }
 
+
 const Exchanges: FC<ExchangeProps> = ({title, pageIcon}) => {
+
     return (
         <>
             <div className="flex justify-between">
