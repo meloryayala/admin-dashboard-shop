@@ -31,7 +31,7 @@ const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon}) => {
                 <div className="card w-full bg-base-100 p-8 my-2">
                     <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
 
-                    <div className="m-6">
+                    <div className="mt-3 mb-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Order number" value={order?.orderNumber} disabled/>
                             <TextInput label="Order date" value={order?.orderDate} disabled/>
@@ -40,7 +40,7 @@ const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon}) => {
                         </div>
                     </div>
 
-                    <div className="m-6">
+                    <div className="my-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
                             <TextInput label="Street" value={order?.clientInfo.streetAdress} disabled/>
                             <TextInput label="House number" value={order?.clientInfo.numberAdress} disabled/>
@@ -49,20 +49,20 @@ const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon}) => {
                         </div>
                     </div>
 
-                    <div className="m-6">
+                    <div className="my-6">
                         <div className="grid grid-cols-1 gap-4 my-2">
                             <ProductInput label="Products" value={order?.products}/>
 
                         </div>
                     </div>
 
-                    <div className="m-6">
+                    <div className="my-6">
                         {
-                            order?.orderStatus === 'Completed'
+                            order?.orderStatus === 'complete'
                                 ? (
                                     <div className="grid grid-cols-2 gap-2">
-                                        <SubmitButton buttonTitle="New exchange" color="bg-sky-200" />
-                                        <SubmitButton buttonTitle="New repair" color="bg-pink-200" />
+                                        <SubmitButton buttonTitle="New repair" color="bg-red-400 hover:bg-red-300"/>
+                                        <SubmitButton buttonTitle="New exchange" color="bg-sky-400 hover:bg-sky-300" />
                                     </div>
                                 )
                                 : (<SubmitButton buttonTitle="Complete order" color="bg-amber-400" />)

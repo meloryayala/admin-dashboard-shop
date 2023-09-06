@@ -10,7 +10,7 @@ export const lastOrders = [
         paymentParcels: 1,
 
         clientComment: '',
-        orderStatus: 'Pending',
+        orderStatus: 'pending',
         sendDate: '-',
         clientInfo: {
             pronoun: 'Sir',
@@ -32,7 +32,7 @@ export const lastOrders = [
         paymentParcels: 2,
 
         clientComment: '',
-        orderStatus: 'Completed',
+        orderStatus: 'complete',
         sendDate: '18/08/2023',
 
         clientInfo: {
@@ -55,7 +55,7 @@ export const lastOrders = [
         paymentParcels: 1,
 
         clientComment: 'Comment made by the client regarding the ordered items.',
-        orderStatus: 'Completed',
+        orderStatus: 'complete',
         sendDate: '20/08/2023',
         clientInfo: {
             pronoun: 'Sir',
