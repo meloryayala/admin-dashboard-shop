@@ -1,6 +1,7 @@
 import {FC} from "react";
 import {Link} from "react-router-dom";
 import ExchangeStatus from "../StatusLists/ExchangeStatus";
+import {enumCases} from "../../../constants/cases";
 
 interface ExchangeStatusProp {
     clientName: string;
@@ -24,7 +25,7 @@ const ExchangeRow:FC<ExchangeStatusProp> = ({clientName, streetAdress, cityAdres
                         <h3 className="text-base font-medium">{clientName}</h3>
                         <p className="text-xs">{cityAdress}, {streetAdress}</p>
                     </div>
-                    <ExchangeStatus exchangeStatus={exchangeStatus} />
+                    <ExchangeStatus exchangeStatus={exchangeStatus} caseType={enumCases.EXCHANGE} />
                     <div className="col-span-3">{productClientHas} ➜ {productClientNeed}</div>
                     <div>{openExchange}</div>
                     <div>{sendDate === ''? '-' : sendDate}</div>

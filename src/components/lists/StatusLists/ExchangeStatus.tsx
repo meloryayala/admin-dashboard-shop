@@ -2,11 +2,12 @@ import {FC} from "react";
 import useFilterStat from "../../../hooks/useFilterStat";
 
 interface ExchangeStatusProp {
-    exchangeStatus: string
+    exchangeStatus: string;
+    caseType:string;
 }
 
-const ExchangeStatus: FC<ExchangeStatusProp> = ({exchangeStatus}) => {
-    const statusItems = useFilterStat(exchangeStatus)
+const ExchangeStatus: FC<ExchangeStatusProp> = ({exchangeStatus, caseType}) => {
+    const statusItems = useFilterStat(caseType, exchangeStatus)
 
     return(
         <div className={statusItems.style}>
