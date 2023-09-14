@@ -9,6 +9,7 @@ import lastExchanges from "../../data/exchanges";
 import TrackItemLink from "../../components/Form/TrackItemLink";
 import TextArea from "../../components/Form/TextArea";
 import ToggleInput from "../../components/Form/ToggleInput";
+import {enumCases} from "../../constants/cases";
 
 
 interface ExchangeDetailsProps {
@@ -20,7 +21,8 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
     const [searchParams, setSearchParams] = useSearchParams()
-    const currentStatus = searchParams.get('status')
+    const currentStatus = searchParams.get('status')!
+    // const currentStatus: string = search! ? search : 'Not found';
 
     const handleReturnPage = () => {
         navigate('/exchanges');
@@ -35,8 +37,12 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
 
             <form className="form-control">
                 <div className="card w-full bg-base-100 p-8 my-2">
-                    <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon}
-                                currentStatus={currentStatus}/>
+                    <FormHeader
+                        title={title}
+                        orderNumber={orderNumber}
+                        pageIcon={pageIcon}
+                        currentStatus={currentStatus}
+                        caseType={enumCases.EXCHANGE}/>
 
                     <div className="my-6">
                         <div className="grid grid-cols-2 gap-4 my-2">

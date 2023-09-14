@@ -10,7 +10,10 @@ interface ExchangeType {
     textStatus: string,
 }
 
-export const verifyExchange = (receivedStatus: string, setStatusItems: React.Dispatch<React.SetStateAction<ExchangeType>> ) => {
+export const verifyExchange = (
+    receivedStatus: string,
+    setStatusItems: React.Dispatch<React.SetStateAction<ExchangeType>>
+) => {
     if (receivedStatus === 'open') {
         setStatusItems({
             style: 'col-span-2 badge badge-outline badge-warning bg-amber-50 p-4 w-full space-x-2',

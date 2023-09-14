@@ -7,6 +7,7 @@ import ProductInput from "../../components/Form/ProductInput";
 import FormHeader from "../../components/Form/FormHeader";
 import SubmitButton from "../../components/Form/SubmitButton";
 import ReturnButton from "../../components/Form/ReturnButton";
+import {enumCases} from "../../constants/cases";
 
 interface OrderDetailsProps {
     title: string;
@@ -29,7 +30,12 @@ const OrderForm: FC<OrderDetailsProps> = ({title, pageIcon}) => {
 
             <form className="form-control">
                 <div className="card w-full bg-base-100 p-8 my-2">
-                    <FormHeader title={title} orderNumber={orderNumber} pageIcon={pageIcon} />
+                    <FormHeader
+                        title={title}
+                        orderNumber={orderNumber}
+                        pageIcon={pageIcon} currentStatus={order?.orderStatus!}
+                        caseType={enumCases.ORDER}
+                    />
 
                     <div className="mt-3 mb-6">
                         <div className="grid grid-cols-2 gap-4 my-2">
