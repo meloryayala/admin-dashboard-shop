@@ -1,7 +1,8 @@
 import {FC} from "react";
 import {Link} from "react-router-dom";
-import RepairStatus from "../StatusLists/RepairStatus";
-import RepairTypeBadge from "../StatusLists/RepairTypeBadge";
+import RepairTypeBadge from "../RepairTypeBadge";
+import {enumCases} from "../../../constants/cases";
+import StatusBadge from "../StatusBadge";
 
 interface RepairStatusProp {
     clientName: string;
@@ -24,7 +25,7 @@ const RepairRow:FC<RepairStatusProp> = ({clientName, streetAdress, cityAdress,pr
                         <h3 className="text-base font-medium">{clientName}</h3>
                         <p className="text-xs">{cityAdress}, {streetAdress}</p>
                     </div>
-                    <RepairStatus repairStatus={repairStatus} />
+                    <StatusBadge caseStatus={repairStatus} caseType={enumCases.REPAIR} />
                     <div>{productToRepair}</div>
                     <div>{openRepair}</div>
                     <div><RepairTypeBadge repairType={repairType} /> </div>

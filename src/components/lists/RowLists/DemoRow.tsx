@@ -1,6 +1,7 @@
 import {FC} from "react";
 import {Link} from "react-router-dom";
-import DemoStatus from "../StatusLists/DemoStatus";
+import StatusBadge from "../StatusBadge";
+import {enumCases} from "../../../constants/cases";
 
 interface DemoStatusProp {
     clientName: string;
@@ -23,7 +24,7 @@ const DemoRow:FC<DemoStatusProp> = ({clientName, streetAdress, cityAdress,produc
                         <h3 className="text-base font-medium">{clientName}</h3>
                         <p className="text-xs">{cityAdress}, {streetAdress}</p>
                     </div>
-                    <DemoStatus demoStatus={demoStatus} />
+                    <StatusBadge caseStatus={demoStatus} caseType={enumCases.DEMO} />
                     <div>{productDemo}</div>
                     <div>{openDemo}</div>
                     <div>{sendDate === '' ? '-' : sendDate}</div>

@@ -1,6 +1,7 @@
 import {FC} from "react";
-import OrderStatus from "../StatusLists/OrderStatus";
 import {Link} from "react-router-dom";
+import {enumCases} from "../../../constants/cases";
+import StatusBadge from "../StatusBadge";
 
 interface OrderStatusProp {
     clientName: string;
@@ -23,7 +24,7 @@ return(
             <h3 className="text-base font-medium">{clientName}</h3>
             <p className="text-xs">{cityAdress}, {streetAdress}</p>
         </div>
-        <OrderStatus orderStatus={orderStatus} />
+           <StatusBadge caseStatus={orderStatus} caseType={enumCases.ORDER} />
         <div>{products.map(product => <p>{product}</p> )}</div>
         <div>{orderDate}</div>
         <div>{sendDate}</div>
