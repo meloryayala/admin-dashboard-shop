@@ -1,4 +1,4 @@
-import {useCallback, useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 import {
     BellIcon as OpenIcon,
     CheckCircleIcon as CompleteIcon,
@@ -32,7 +32,7 @@ const useFilterStat = (receivedStatus: string) => {
 
     useEffect(()=> {
        verifyStatus()
-    },[])
+    })
 
     return(
         statusItems

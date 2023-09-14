@@ -1,7 +1,4 @@
 import {FC} from "react";
-import {
-    CheckCircleIcon as CompleteIcon,
-} from "@heroicons/react/24/outline";
 import useFilterStat from "../../../hooks/useFilterStat";
 
 interface ExchangeStatusProp {
