@@ -3,7 +3,7 @@ const lastDemos = [
         demoId: 1001,
         productDemo: 'Pro suit XS',
         demoComment: 'Comment regarding the demo or client need.',
-        demoStatus: 'Open demo',
+        demoStatus: 'open',
         dateHistoric: {
             openDemo: '20/02/2023',
             sendArticle: '',
@@ -22,7 +22,7 @@ const lastDemos = [
         demoId: 1002,
         productDemo: 'Pro suit XL',
         demoComment: '',
-        demoStatus: 'Send article',
+        demoStatus: 'send',
         dateHistoric: {
             openDemo: '15/04/2023',
             sendArticle: '20/06/2023',
@@ -42,7 +42,7 @@ const lastDemos = [
         demoId: 1003,
         productDemo: 'Home suit M',
         demoComment: '',
-        demoStatus: 'Completed',
+        demoStatus: 'complete',
         dateHistoric: {
             openDemo: '10/01/2023',
             sendArticle: '15/02/2023',

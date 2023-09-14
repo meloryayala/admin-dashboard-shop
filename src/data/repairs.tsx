@@ -4,7 +4,7 @@ const lastRepairs = [
         orderDate: '20/01/2023',
         productToRepair: 'Pro powerbox',
         repairProblem: 'Description about the product to be repaired.',
-        repairStatus: 'Open repair',
+        repairStatus: 'open',
         repairType: '',
         dateHistoric: {
             openRepair: '20/02/2023',
@@ -25,8 +25,8 @@ const lastRepairs = [
         orderDate: '25/03/23',
         productToRepair: 'Home suit M',
         repairProblem: 'Description about the product to be repaired.',
-        repairStatus: 'Send article',
-        repairType: 'External',
+        repairStatus: 'germany',
+        repairType: 'external',
         dateHistoric: {
             openRepair: '20/02/2023',
             sendArticle: '25/04/2023',
@@ -44,11 +44,32 @@ const lastRepairs = [
         },
     },
     {
+        orderNumber: 3509,
+        orderDate: '10/05/2023',
+        productToRepair: 'Pro suit L',
+        repairProblem: 'Description about the product to be repaired.',
+        repairStatus: 'queue',
+        repairType: 'external',
+        dateHistoric: {
+            openRepair: '26/02/2023',
+            sendArticle: '30/03/2023',
+            completedExchange: '3/08/2023',
+        },
+        clientInfo: {
+            pronoun: 'Sir',
+            name: 'Jan Tul',
+            streetAdress: 'Helvetiastrasse',
+            numberAdress: 36,
+            cityAdress: 'Bern',
+            postNumberAdress: 3520,
+        },
+    },
+    {
         orderNumber: 3589,
         orderDate: '10/05/2023',
         productToRepair: 'Pro suit XS',
         repairProblem: 'Description about the product to be repaired.',
-        repairStatus: 'Completed',
+        repairStatus: 'complete',
         repairType: 'Internal',
         dateHistoric: {
             openRepair: '20/02/2023',
