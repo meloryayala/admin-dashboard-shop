@@ -32,7 +32,7 @@ const useFilterStat = (receivedStatus: string) => {
 
     useEffect(()=> {
        verifyStatus()
-    })
+    },[])
 
     return(
         statusItems
