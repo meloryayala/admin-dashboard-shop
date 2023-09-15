@@ -12,12 +12,12 @@ import ToggleInput from "../../components/Form/ToggleInput";
 import {enumCases} from "../../constants/cases";
 
 
-interface ExchangeDetailsProps {
+interface ExchangeFormProps {
     title: string;
     pageIcon: JSX.Element;
 }
 
-const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
+const ExchangeForm: FC<ExchangeFormProps> = ({title, pageIcon}) => {
     const {orderNumber} = useParams();
     const navigate = useNavigate()
     const [searchParams, setSearchParams] = useSearchParams()
@@ -42,7 +42,8 @@ const ExchangeForm: FC<ExchangeDetailsProps> = ({title, pageIcon}) => {
                         orderNumber={orderNumber}
                         pageIcon={pageIcon}
                         currentStatus={currentStatus}
-                        caseType={enumCases.EXCHANGE}/>
+                        caseType={enumCases.EXCHANGE}
+                    />
 
                     <div className="my-6">
                         <div className="grid grid-cols-2 gap-4 my-2">

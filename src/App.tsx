@@ -16,6 +16,7 @@ import Demos from "./pages/Demos";
 import OrderForm from "./pages/forms/OrderForm";
 import ExchangeForm from "./pages/forms/ExchangeForm";
 import React from "react";
+import RepairForm from "./pages/forms/RepairForm";
 
 
 const App = () => {
@@ -79,6 +80,11 @@ const App = () => {
                           pageIcon={exchangeIcon}
                       />}/>
 
+                  <Route path="/repairs/details/:orderNumber" element={
+                      <RepairForm
+                          title='Repair'
+                          pageIcon={repairIcon}
+                      />}/>
 
               </Routes>
           </TemplateDefault>

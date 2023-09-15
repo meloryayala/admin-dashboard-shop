@@ -19,7 +19,7 @@ const RepairRow:FC<RepairStatusProp> = ({clientName, streetAdress, cityAdress,pr
 
     return(
         <li>
-            <Link to={`/orders/details/${orderNumber}`}>
+            <Link to={{ pathname: `/repairs/details/${orderNumber}`, search: `?status=${repairStatus}`}}>
                 <div className={`alert grid grid-cols-5 bg-base-100 justify-items-center content-center my-2`}>
                     <div className="justify-self-start pl-3">
                         <h3 className="text-base font-medium">{clientName}</h3>
