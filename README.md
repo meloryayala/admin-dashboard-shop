@@ -63,4 +63,5 @@ This project consists of 3 main parts:
 
 [![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/melory-ayala/)
 
+<br> <br>
 
