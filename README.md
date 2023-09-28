@@ -1,46 +1,66 @@
-# Getting Started with Create React TemplateDefault
+# 🗃️ About The Project
 
-This project was bootstrapped with [Create React TemplateDefault](https://github.com/facebook/create-react-app).
+> 🎯 **Goal:** Develop & design a dashboard management application for a small Swiss e-commerce.
 
-## Available Scripts
+<br>
+ 
+Orders                     |  Product repairs
+:-------------------------:|:-------------------------:
+<img src="https://github.com/meloryayala/ecommerce-admin-dashboard/assets/79602378/a1bb728f-8643-4ea0-8959-7813858dc570" width="100%"> |  <img src="https://github.com/meloryayala/ecommerce-admin-dashboard/assets/79602378/c78b3485-be65-477a-85f6-08a16d96f06e" width="100%">
 
-In the project directory, you can run:
+<br> <br>
 
-### `npm start`
+## 🕹️ Main features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Managing **orders** status
+* Creating and displaying **new product exchanges, product repairs and demos**
+* Managing all exchanges, repairs and trials status
+* Update the **products stock**
+* Sales **statistics**
+* By status change, send **customer e-mails and post-etiquettes**
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br> <br>
 
-### `npm test`
+## 🛠️ Tools & frameworks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[![My Skills](https://skillicons.dev/icons?i=js,ts,react,tailwind,git,figma)](https://skillicons.dev)
 
-### `npm run build`
+<br> <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🕹️ Requirements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Entities
+    - Orders
+    - Repairs
+    - Exchanges
+    - Demos
+    - products
+      
+- Architecture
+    - to continue...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br> <br>
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## 📅 Roadmap
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project consists of 3 main parts:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. [X] Designin the User Interface and interactions
+2. [ ] Developing the frontend and API design
+3. [ ] Developing the backend part and connect the project
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+<br> <br>
 
-## Learn More
+## 👀 If you are curios about [project progress](https://github.com/users/meloryayala/projects/1/views/2)
 
-You can learn more in the [Create React TemplateDefault documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
+<img src="https://github.com/meloryayala/ecommerce-admin-dashboard/assets/79602378/f072b833-baed-4ba3-a8ea-a16510a81bc6" width="60%">
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<br> <br>
+
+## 🔌 Connect with on LinkedIn
+
+[![My Skills](https://skillicons.dev/icons?i=linkedin)](https://www.linkedin.com/in/melory-ayala/)
+
+
