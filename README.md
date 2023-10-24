@@ -1,4 +1,5 @@
 # 📊 Admin dashboard
+<br>
 
 > 🎯 **Focus:** Develop & design a dashboard management application for a small Swiss e-commerce.
 
@@ -21,12 +22,12 @@ Orders                     |  Product repairs
       
 
 **-Features:**
-* Managing **orders** status
-* Creating and displaying **new product exchanges, product repairs and demos**
-* Managing all exchanges, repairs and trials status
-* Update the **products stock**
-* Sales **statistics**
-* By status change, send **customer e-mails and post-etiquettes**
+* Managing **orders** status 🏷️
+* Creating and displaying **new product exchanges, product repairs and demos** 📑
+* Managing all exchanges, repairs and trials status 🗃️
+* Update the **products stock** ✒️
+* Sales **statistics** 📊
+* By status change, send **customer e-mails and post-etiquettes** 📧 📦
 
 <br> <br>
 
