@@ -1,6 +1,6 @@
-# 🗃️ About The Project
+# 📊 Admin dashboard
 
-> 🎯 **Goal:** Develop & design a dashboard management application for a small Swiss e-commerce.
+> 🎯 **Focus:** Develop & design a dashboard management application for a small Swiss e-commerce.
 
 <br>
  
@@ -10,8 +10,17 @@ Orders                     |  Product repairs
 
 <br> <br>
 
-## 🕹️ Main features
+## 📋 Requirements
 
+**-Entities:**
+* Orders
+* Repairs
+* Exchanges
+* Demos
+* products
+      
+
+**-Features:**
 * Managing **orders** status
 * Creating and displaying **new product exchanges, product repairs and demos**
 * Managing all exchanges, repairs and trials status
@@ -25,19 +34,6 @@ Orders                     |  Product repairs
 
 [![My Skills](https://skillicons.dev/icons?i=js,ts,react,tailwind,git,figma)](https://skillicons.dev)
 
-<br> <br>
-
-## 🕹️ Requirements
-
-- Entities
-    - Orders
-    - Repairs
-    - Exchanges
-    - Demos
-    - products
-      
-- Architecture
-    - to continue...
 
 <br> <br>
 
@@ -46,13 +42,13 @@ Orders                     |  Product repairs
 
 This project consists of 3 main parts:
 
-1. [X] Designin the User Interface and interactions
-2. [ ] Developing the frontend and API design
-3. [ ] Developing the backend part and connect the project
+1. [✔️] Designing the User Interface and interactions
+2. [📍] Developing the frontend and API design
+3. [    ] Develop the backend part and connect the project
 
 <br> <br>
 
-## 👀 If you are curios about [project progress](https://github.com/users/meloryayala/projects/1/views/2)
+## 👀 If you are curious about [project progress](https://github.com/users/meloryayala/projects/1/views/2)
 
 <br>
 <img src="https://github.com/meloryayala/ecommerce-admin-dashboard/assets/79602378/f072b833-baed-4ba3-a8ea-a16510a81bc6" width="60%">
